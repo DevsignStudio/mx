@@ -1,0 +1,60 @@
+.mx-checkbox {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    float:left;
+    
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    .mx-checkbox-outline {
+        fill: $color-grey-600;
+    }
+    .mx-checkbox-box {
+        fill: $theme-primary;
+        opacity: 0;
+        @include transition(opacity 0.5s $easeOutExpo);
+    }
+
+    .checkbox-ripple {
+        width: 48px;
+        height: 48px;
+        @include border-radius(50%);
+        background: $color-grey-500;
+        position: absolute;
+        z-index: -1;
+        opacity: 0.2;
+        top: -12px;
+        left: -12px;
+        opacity: 0;
+        @include transition(all 0.3s ease-in-out);
+
+        &.active {
+            opacity: 0.2;
+        }
+    }
+
+    &.checked {
+        .mx-checkbox-box {
+            opacity: 1;
+        }
+
+        .checkbox-ripple {
+            background: $theme-primary;
+        }
+    }
+
+    &.disabled {
+        pointer-events: none;
+
+        .mx-checkbox-outline,
+        .mx-checkbox-box {
+            fill: $color-grey-500;
+        }
+    }
+
+}

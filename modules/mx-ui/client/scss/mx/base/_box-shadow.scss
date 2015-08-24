@@ -1,0 +1,85 @@
+.z1-shadow {
+	@include box-shadow($z1-shadow);
+}
+
+.z2-shadow {
+	@include box-shadow($z2-shadow);
+}
+
+.z3-shadow {
+	@include box-shadow($z3-shadow);
+}
+
+.z4-shadow {
+	@include box-shadow($z4-shadow);
+}
+
+.z5-shadow {
+	@include box-shadow($z5-shadow);
+}
+
+.top-z1-shadow {
+	@include box-shadow($top-z1-shadow);
+}
+
+.top-z2-shadow {
+	@include box-shadow($top-z2-shadow);
+}
+
+.top-z3-shadow {
+	@include box-shadow($top-z3-shadow);
+}
+
+.top-z4-shadow {
+	@include box-shadow($top-z4-shadow);
+}
+
+.top-z5-shadow {
+	@include box-shadow($top-z5-shadow);
+}
+
+.side-z1-shadow {
+	@include box-shadow($side-z1-shadow);
+}
+
+.side-z2-shadow {
+	@include box-shadow($side-z2-shadow);
+}
+
+.side-z3-shadow {
+	@include box-shadow($side-z3-shadow);
+}
+
+.side-z4-shadow {
+	@include box-shadow($side-z4-shadow);
+}
+
+.side-z5-shadow {
+	@include box-shadow($side-z5-shadow);
+}
+
+/*$z1-shadow: 0  1px  3px rgba(#000, 0.12), 0  1px  2px rgba(#000, 0.24);
+$z2-shadow: 0  3px  6px rgba(#000, 0.16), 0  3px  6px rgba(#000, 0.23);
+$z3-shadow: 0 10px 20px rgba(#000, 0.19), 0  6px  6px rgba(#000, 0.23);
+$z4-shadow: 0 14px 28px rgba(#000, 0.25), 0 10px 10px rgba(#000, 0.22);
+$z5-shadow: 0 19px 38px rgba(#000, 0.30), 0 15px 12px rgba(#000, 0.22);
+
+// Top shadows (for "bottom" positionned elements)
+$top-z1-shadow: 0  -1px  3px rgba(#000, 0.12), 0  -1px  2px rgba(#000, 0.24);
+$top-z2-shadow: 0  -3px  6px rgba(#000, 0.16), 0  -3px  6px rgba(#000, 0.23);
+$top-z3-shadow: 0 -10px 20px rgba(#000, 0.19), 0  -6px  6px rgba(#000, 0.23);
+$top-z4-shadow: 0 -14px 28px rgba(#000, 0.25), 0 -10px 10px rgba(#000, 0.22);
+$top-z5-shadow: 0 -19px 38px rgba(#000, 0.30), 0 -15px 12px rgba(#000, 0.22);
+
+// Shadows for full size "side" elements (using spread to make corners look right)
+$side-z1-shadow: 0 0  3px 0.75px rgba(#000, 0.12), 0 0  2px 0.5px rgba(#000, 0.24);
+$side-z2-shadow: 0 0  6px  1.5px rgba(#000, 0.16), 0 0  6px 1.5px rgba(#000, 0.23);
+$side-z3-shadow: 0 0 20px    5px rgba(#000, 0.19), 0 0  6px 1.5px rgba(#000, 0.23);
+$side-z4-shadow: 0 0 28px    7px rgba(#000, 0.25), 0 0 10px 2.5px rgba(#000, 0.22);
+$side-z5-shadow: 0 0 38px  9.5px rgba(#000, 0.30), 0 0 12px   3px rgba(#000, 0.22);
+
+// Raised button shadow (this in an approximation from  http://material-design.storage.googleapis.com/images/components-buttons-states-for-mocks-2a_large_mdpi.png)
+$raised-button-normal-shadow:  1px 2px 3px rgba(#000, 0.17), 0 1px 4px rgba(#000, 0.16);
+$raised-button-hover-shadow:   0   1px 3px rgba(#000, 0.13), 0 1px 4px rgba(#000, 0.16);
+$raised-button-focused-shadow: 0   5px 6px rgba(#000, 0.15), 0 2px 5px rgba(#000, 0.16);
+$raised-button-pressed-shadow: 0   6px 5px rgba(#000, 0.09), 0 7px 6px rgba(#000, 0.16);*/

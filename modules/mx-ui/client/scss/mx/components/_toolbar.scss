@@ -1,0 +1,97 @@
+/*
+	type of toolbar :
+
+* 	seam
+* 	above
+* 	cover
+* 	seam -> above
+*/
+
+
+.toolbar {
+	position: relative;
+	border-bottom: 1px solid $color-grey-300;
+	height: 56px;
+	width: 100%;
+
+
+	.toolbar-contain {
+		& .icon-button {
+			width: 56px;
+			height: 56px;
+			padding: 16px;
+		}
+	}
+
+	.toolbar-background {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top:0;
+		left: 0;
+		background: $theme-primary;
+		overflow: hidden;
+	}
+
+	&.seam {
+		/*default is seam*/
+	}
+
+	&.above {
+		position: fixed;
+		top: 0;
+		left: 0;
+		@include box-shadow-z1;
+		border-bottom: 0;
+		z-index: 200;
+	}
+
+	&.cover {
+		position: fixed;
+		top: 0;
+		left: 0;
+		border-bottom: 0;
+		z-index: 0;
+
+		& .toolbar-background {
+			background: transparent;
+		}
+	}
+
+
+	@include breakpoint("xd") {
+		height: 64px;
+
+		& .toolbar-contain {
+			& .icon-button {
+				width: 64px;
+				height: 64px;
+				padding: 20px;
+			}
+		}
+	}
+}
+
+.after-toolbar {
+	margin-top: 56px;
+	@include breakpoint("xd") {
+		margin-top: 64px;
+	}
+}
+
+.icon-button {
+	text-decoration: none;
+	color: $color-grey-900;
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	padding: 12px;
+	cursor: pointer;
+	position: relative;
+	@include transform(translateZ(0));
+	@include border-radius(50%);
+
+	&.white {
+		color: $color-grey-200;
+	}
+}

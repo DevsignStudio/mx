@@ -1,0 +1,53 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <!-- <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'> -->
+    <title>MX template</title>
+</head>
+<body>
+    <div class="side-navigation dont-count">
+        <div class="side-navigation-inner">
+            <div class="nav-top">
+            </div>
+            <div class="nav-content">
+                <div class="nav-profile">
+                    <div class="overlay"></div>
+                    <a href="javascript:"><img src="/img/profile.png" alt=""></a>
+                    <a href="javascript:"><div class="profile-name">Nizul Zaim</div></a>
+                    <div class="profile-email">emailaddress@devsign.my</div>
+                </div>
+                <div class="nav-menu">
+                    <a class="nav-list active" href="/"><i class="mdi mdi-home"></i> Dashboard Panel</a>
+                    <a class="nav-list submenu" href="javascript:;"><i class="mdi mdi-palette-advanced"></i> UI Components</a>
+                    <div class="nav-sublist show">
+                        <a class="nav-list" href="/ui/sheet"><i class="mdi mdi-checkbox-multiple-blank"></i>Paper Shadow</a>
+                        <a class="nav-list" href="/ui/color"><i class="mdi mdi-palette"></i>Color Palette</a>
+                        <a class="nav-list" href="/ui/button"><i class="mdi mdi-checkbox-blank"></i>Basic Button</a>
+                        <a class="nav-list" href="/ui/icon-toggle"><i class="mdi mdi-checkbox-blank-circle"></i>Button: Icon Toggle</a>
+                        <a class="nav-list" href="/ui/cards"><i class="mdi mdi-checkbox-blank-circle"></i>Cards</a>
+                        <a class="nav-list" href="/ui/checkbox"><i class="mdi mdi-checkbox-blank-circle"></i>Checkbox</a>
+                        <a class="nav-list" href="/ui/table"><i class="mdi mdi-checkbox-blank-circle"></i>Table</a>
+                        <a class="nav-list" href="/ui/textfield"><i class="mdi mdi-checkbox-blank-circle"></i>Text Fields</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="toolbar above">
+    	<div class="toolbar-background">
+    		<div class="ripple-background background-brown"></div>
+    	</div>
+    	<div class="toolbar-contain">
+    		<a href="javascript:;" data-side-navigation=".side-navigation" class="icon-button white ripple"><i class="mdi mdi-menu"></i></a>
+    	</div>
+    </div>
+
+    {{> Router}}
+
+</body>
+
+<template name="ApplicationLayout">
+    {{> yield}}
+</template>

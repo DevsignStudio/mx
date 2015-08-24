@@ -1,0 +1,102 @@
+button.raised-button,a.raised-button {
+	background: $color-grey-100;
+	@include box-shadow-z1;
+
+	&:hover, &:focus {
+		background: $color-grey-200;
+		@include box-shadow-z2;
+		&:active {
+			@include box-shadow-z3;
+		}
+	}
+
+	&.primary {
+		color: $color-white;
+		background:$color-blue-500;
+		&:hover {
+			background:$color-blue-600;
+		}
+	}
+
+	&.secondary {
+		color: $color-white;
+		background:$color-pink-500;
+		&:hover {
+			background:$color-pink-600;
+		}
+	}
+
+	&:disabled, &.disabled, &.disabled:focus, &.disabled:hover {
+		background: rgba(0,0,0,0.1);
+		color: rgba(0,0,0,0.3);
+		@include box-shadow(none);
+		pointer-events: none;
+	}
+
+}
+
+button.flat-button, a.flat-button {
+	background: transparent;
+
+	&:hover, &:focus {
+		background: rgba(0,0,0,0.1);
+	}
+
+	&.primary {
+		color: $color-blue;
+	}
+
+	&.secondary {
+		color: $color-pink;
+	}
+
+	&:disabled, &.disabled, &.disabled:focus, &.disabled:hover {
+		color: $color-grey-500;
+		background: transparent;
+		@include box-shadow(none);
+		pointer-events: none;
+	}
+}
+
+button.raised-button,a.raised-button, button.flat-button, a.flat-button {
+	@include ty-button;
+	min-width: 88px;
+	vertical-align: middle;
+	overflow-y: hidden;
+	height: 36px;
+	line-height: 24px;
+	padding: 6px 12px;
+	border: 0;
+	margin: 0;
+	cursor: pointer;
+	display: block;
+	@include border-radius(2px);
+	@include transition(all 600ms $easeOutExpo);
+	float: left;
+	position: relative;
+	text-decoration: none;
+	text-align: center;
+	color: $color-grey-900;
+	margin-top: 6px;
+	margin-bottom: 6px;
+	@include transform(translateZ(0));
+
+	&.button-block {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	&.center {
+		margin-right: auto;
+		margin-left: auto;
+		float: none;
+		display: table;
+	}
+
+	@include webkit-fix{
+		line-height: 29px;
+		padding-top: 5px;
+		padding-bottom: 2px;
+	}
+}
+

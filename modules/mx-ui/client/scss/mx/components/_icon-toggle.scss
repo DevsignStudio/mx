@@ -1,0 +1,89 @@
+.icon-toggle {
+	width: 48px;
+	height: 48px;
+	display: block;
+	padding: 12px;
+	color: $color-grey-700;
+	background: transparent;
+	margin: 0;
+	border: 0;
+	@include border-radius(50%);
+	cursor: pointer;
+	@include transition(background 0.2s $easeInOutNew);
+	position: relative;
+	@include transform(translateZ(0));
+	display: inline-block;
+	float: left;
+
+	.ripple-circle {
+		background: $color-grey-400;
+	}
+
+	&:hover, &.hover, &:focus {
+		background: rgba(0,0,0,0.05);
+	}
+
+	 &.pressed {
+		background: rgba(0,0,0,0.1);
+	}
+
+	&:disabled, &.disabled, &.disabled:focus {
+		color: $color-grey-500;
+		background: transparent;
+		@include box-shadow(none);
+		pointer-events: none;
+	}
+
+	&.primary {
+		color: $color-blue;
+
+		.ripple-circle {
+			background: $color-blue-200;
+		}
+
+		&:hover, &.hover, &:focus {
+			background: rgba(33,150,243,0.20);
+		}
+
+		 &.pressed {
+			background: rgba(33,150,243,0.40);
+		}
+
+		&:disabled, &.disabled, &.disabled:focus {
+			color: $color-grey-500;
+			background: transparent;
+			@include box-shadow(none);
+			pointer-events: none;
+		}
+	}
+
+	&.secondary {
+		color: $color-pink;
+
+		.ripple-circle {
+			background: $color-pink-200;
+		}
+
+		&:hover, &.hover, &:focus {
+			background: rgba(233,30,99,0.20);
+		}
+
+		 &.pressed {
+			background: rgba(233,30,99,0.40);
+		}
+
+		&:disabled, &.disabled, &.disabled:focus {
+			color: $color-grey-500;
+			background: transparent;
+			@include box-shadow(none);
+			pointer-events: none;
+		}
+	}
+
+	@include webkit-fix {
+		.mdi:before {
+			line-height: 26px;
+		}
+		padding-bottom: 10px;
+	}
+}

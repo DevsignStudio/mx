@@ -1,0 +1,202 @@
+.side-navigation {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 80;
+	visibility: hidden;
+	top: 0;
+	left: 0;
+
+	&.front {
+		z-index: 900;
+	}
+
+	.side-navigation-inner {
+		width: 320px;
+		max-width: 90%;
+		height: 100%;
+		@include box-shadow(0);
+		background: $color-white;
+		position: absolute;
+		top: 0;
+		left: 0;
+		@include transform(translateX(-100%));
+		@include transition(transform 0.4s cubic-bezier(.37,.15,.32,.94));
+
+		& .nav-top {
+			height: 56px;
+			width: 100%;
+			background: $color-grey-300;
+
+			@include breakpoint("xd") {
+				height: 64px;
+			}
+		}
+
+		& .nav-profile {
+			padding: 24px 16px;
+			background: url(../img/back1.png);
+			background-position: center;
+			background-size: cover;
+			position: relative;
+			& img {
+				width: 64px;
+				height: 64px;
+				display: block;
+				@include border-radius(50%);
+				margin: 0;
+				position:relative;
+				z-index: 1;
+			}
+
+			& .profile-name {
+				@include ty-body;
+				font-weight: 500;
+				color: $color-white;
+				padding-top: 16px;
+				position:relative;
+				z-index: 1;
+				display: table;
+			}
+
+			.overlay {
+				background: $color-black;
+				opacity: 0.4;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				z-index: 0;
+			}
+
+			.profile-email {
+				@include ty-body;
+				font-weight: 400;
+				color: $color-grey-100;
+				position:relative;
+				z-index: 1;
+			}
+		}
+
+		& .nav-content {
+			height: calc(100% -56px);
+			width: 100%;
+			overflow: auto;
+			@include breakpoint("xd") {
+				height: calc(100% - 64px);
+			}
+
+			.nav-menu {
+				margin-top: 8px;
+				overflow: hidden;
+				.nav-list {
+					width: 100%;
+					height: 48px;
+					display: block;
+					position: relative;
+					padding: 8px 12px;
+//					padding-left: px;
+					@include ty-menu;
+					line-height: 33px;
+					text-decoration: none;
+					color: $color-grey-800;
+					background: $color-white;
+					@include transition(background 0.3s ease-in-out);
+					z-index: 3;
+					font-weight: 500;
+					&:hover {
+						background: $color-grey-200;
+					}
+
+					.mdi {
+						color: $color-grey-500;
+						vertical-align: middle;
+						margin-right: 16px;
+					}
+
+					& .chevron {
+						position: absolute;
+						right: 12px;
+						top: 12px;
+						width: 24px;
+						height: 24px;
+//						@include transition(transform 0.3s ease-in-out);
+						& svg {
+							fill : $color-grey;
+						}
+
+						&.show {
+							@include transform(rotate(90deg));
+						}
+					}
+
+					&.active {
+						color: $color-blue-500;
+
+						&:hover {
+							background: $color-blue-100;
+						}
+
+						.mdi {
+							color: $color-blue-400;
+						}
+
+						& .chevron {
+							svg {
+								fill : $color-blue-400;
+							}
+						}
+					}
+				}
+				.nav-sublist {
+					position: relative;
+					z-index: 1;
+					display: table;
+					width: 100%;
+					height: 0;
+//					@include transform(translate3d(0,0,0));
+					@include transition(margin-top 0.4s $easeInOutNew);
+					.nav-list {
+						padding-left: 48px;
+						font-weight: 400;
+
+						.icon {
+							left: 36px;
+						}
+					}
+					&.show {
+						margin: 0;
+					}
+				}
+				.divider {
+					height: 1px;
+					background: $color-grey-200;
+				}
+			}
+		}
+	}
+
+	.side-overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: $color-black;
+		opacity: 0;
+		@include transition(opacity 0.5s $easeInOutNew);
+	}
+
+	&.active {
+		.side-navigation-inner {
+			@include transform(translateX(0));
+			@include box-shadow(z1-shadow);
+
+		}
+
+		.side-overlay {
+			opacity: 0.5;
+		}
+	}
+}

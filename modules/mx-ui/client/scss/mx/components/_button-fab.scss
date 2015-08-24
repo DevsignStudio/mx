@@ -1,0 +1,72 @@
+.fab {
+	display: block;
+	width: 56px;
+	height: 56px;
+	background: $color-grey-100;
+	@include border-radius(50%);
+	@include box-shadow-z1;
+	position: relative;
+	@include transition((box-shadow 0.2s $easeInOutNew, background 0.3s $easeInOutNew));
+	padding: 16px;
+	overflow: hidden;
+	text-decoration: none;
+	color: $color-grey-900;
+	@include transform(translateZ(0));
+
+	& .mdi {
+		&:before {
+			line-height: 24px;
+		}
+	}
+
+	&.center {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	&:focus {
+		@include box-shadow-z2;
+	}
+
+	&:hover, &:active {
+		@include box-shadow-z3;
+	}
+
+	&:active{
+		background: $color-grey-200;
+	}
+
+	&.primary {
+		background: $color-blue;
+		color: $color-grey-100;
+		&:hover {
+			background: $color-blue-600;
+		}
+	}
+
+	&.secondary {
+		background: $color-pink;
+		color: $color-grey-100;
+
+		&:hover {
+			background: $color-pink-600;
+		}
+	}
+
+	&:disabled, &.disabled {
+		background: rgba(0,0,0,0.1);
+		color: rgba(0,0,0,0.3);
+		@include box-shadow(none);
+		pointer-events: none;
+	}
+
+	@include webkit-fix {
+		padding-bottom: 14px;
+
+		& .mdi {
+			&:before {
+				line-height: 26px;
+			}
+		}
+	}
+}

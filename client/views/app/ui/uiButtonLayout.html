@@ -1,0 +1,112 @@
+<template name="uiButtonLayout">
+    <div class="page-container">
+        <div class="paper" style="background: #f9f9f9; padding-top: 24px; padding-bottom: 24px;">
+            <div style="padding: 16px; max-width: 1312px; margin: 0 auto;">
+                <div class="row">
+                    <div class="col-md-fluid-8">
+                        <div class="doc-button-2">
+                            <a href="#" class="fab center ripple"><i class="mdi mdi-plus"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-fluid-8">
+                        <div class="doc-button-1">
+                            <a href="#" class="raised-button center ripple">Button</a>
+                        </div>
+                    </div>
+                    <div class="col-md-fluid-8">
+                        <div class="doc-button-1">
+                            <a href="#" class="flat-button center ripple">Button</a>
+                        </div>
+                    </div>
+                    <div class="col-xs-fluid-24">
+                        <div class="code-block" style="margin-top: 16px;">
+                            {{> buttonCode1}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="paper" style="background: #f9f9f9; padding-top: 24px; padding-bottom: 24px;">
+            <div style="padding: 16px; max-width: 1312px; margin: 0 auto;">
+                <div class="row">
+                    <div class="col-md-fluid-8">
+                        <div class="doc-button-2">
+                            <a href="javascript:;" class="fab center ripple primary"><i class="mdi mdi-plus"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-fluid-8">
+                        <div class="doc-button-1">
+                            <a href="javascript:;" class="raised-button center ripple primary">Button</a>
+                        </div>
+                    </div>
+                    <div class="col-md-fluid-8">
+                        <div class="doc-button-1">
+                            <a href="javascript:;" class="flat-button center ripple primary">Button</a>
+                        </div>
+                    </div>
+                    <div class="col-xs-fluid-24">
+                        <div class="code-block" style="margin-top: 16px;">
+                            {{> buttonCode2}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="paper" style="background: #f9f9f9; padding-top: 24px; padding-bottom: 24px;">
+            <div style="padding: 16px; max-width: 1312px; margin: 0 auto;">
+                <div class="row">
+                    <div class="col-md-fluid-8">
+                        <div class="doc-button-2">
+                            <a href="javascript:;" class="fab center ripple secondary"><i class="mdi mdi-plus"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-fluid-8">
+                        <div class="doc-button-1">
+                            <a href="javascript:;" class="raised-button center ripple secondary">Button</a>
+                        </div>
+                    </div>
+                    <div class="col-md-fluid-8">
+                        <div class="doc-button-1">
+                            <a href="javascript:;" class="flat-button center ripple secondary">Button</a>
+                        </div>
+                    </div>
+                    <div class="col-xs-fluid-24">
+                        <div class="code-block" style="margin-top: 16px;">
+                            {{> buttonCode3}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template name="buttonCode1">
+{{#markdown}}
+```
+<a href="#" class="fab ripple"><i class="mdi mdi-plus"></i></a>
+<a href="#" class="raised-button ripple">Button</a>
+<a href="#" class="flat-button ripple">Button</a>
+```
+{{/markdown}}
+</template>
+
+<template name="buttonCode2">
+{{#markdown}}
+```
+<a href="#" class="fab primary ripple"><i class="mdi mdi-plus"></i></a>
+<a href="#" class="raised-button primary ripple">Button</a>
+<a href="#" class="flat-button primary ripple">Button</a>
+```
+{{/markdown}}
+</template>
+
+<template name="buttonCode3">
+{{#markdown}}
+```
+<a href="#" class="fab secondary ripple"><i class="mdi mdi-plus"></i></a>
+<a href="#" class="raised-button secondary ripple">Button</a>
+<a href="#" class="flat-button secondary ripple">Button</a>
+```
+{{/markdown}}
+</template>
