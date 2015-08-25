@@ -1,0 +1,142 @@
+.input-textfield {
+    height: 48px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+
+    input[type="text"] {
+        background: transparent;
+        border: 0;
+        font-size: 16px;
+        padding: 0;
+        padding-top: 16px;
+        padding-bottom: 8px;
+        width: 100%;
+        color: $color-grey-800;
+        border-bottom: 1px solid $color-grey-300;
+        margin-bottom: 7px;
+    }
+
+    input::-webkit-input-placeholder {
+       color: $color-grey-500;
+    }
+
+    input:-moz-placeholder { /* Firefox 18- */
+       color: $color-grey-500;
+    }
+
+    input::-moz-placeholder {  /* Firefox 19+ */
+       color: $color-grey-500;
+    }
+
+    input:-ms-input-placeholder {
+       color: $color-grey-500;
+    }
+
+    input + .border-line  {
+        height: 2px;
+        width: 100%;
+        border-bottom: 2px solid $color-blue;
+        position: absolute;
+        bottom: 7px;
+        left: 0;
+        @include transform(scaleX(0));
+        @include transition(transform 0.4s $easeInOutExpo);
+    }
+
+    input:focus + .border-line {
+        @include transform(scaleX(1));
+    }
+
+    input ~ .guide-text {
+        font-size: 12px;
+        line-height: 12px;
+        opacity: 0;
+        color: $color-blue;
+        @include transform(translateY(-20px));
+        @include transition((opacity 0.4s $easeInOutExpo, transform 0.4s $easeInOutExpo));
+    }
+
+    input:focus ~ .guide-text {
+        opacity: 1;
+        @include transform(translateY(0));
+    }
+
+    input.error, input.success  {
+        & + .border-line {
+            @include transform(scaleX(1));
+        }
+
+        & ~ .guide-text {
+            opacity: 1;
+            @include transform(translateY(0));
+        }
+    }
+
+    input.error {
+        & + .border-line {
+            border-bottom: 2px solid $color-red;
+        }
+
+        & ~ .guide-text {
+            color: $color-red;
+        }
+    }
+
+    input.success {
+        & + .border-line {
+            border-bottom: 2px solid $color-green;
+        }
+
+        & ~ .guide-text {
+            color: $color-green;
+        }
+    }
+
+    input:disabled {
+        border-bottom: 1px dashed $color-grey-400;
+        color: $color-grey-500;
+
+        & + .border-line {
+            @include transform(scaleX(0));
+        }
+
+        & ~ .guide-text {
+            color: $color-grey-500;
+        }
+    }
+
+    input.inverse {
+        color: $color-grey-400;
+        border-bottom: 1px solid $color-grey-800;
+
+        &::-webkit-input-placeholder {
+           color: $color-grey-700;
+        }
+
+        &:-moz-placeholder { /* Firefox 18- */
+           color: $color-grey-700;
+        }
+
+        &::-moz-placeholder {  /* Firefox 19+ */
+           color: $color-grey-700;
+        }
+
+        &:-ms-input-placeholder {
+           color: $color-grey-700;
+        }
+
+        &:focus {
+            color: $color-grey-200;
+        }
+
+        &:disabled {
+            border-bottom: 1px dashed $color-grey-800;
+            color: $color-grey-700;
+
+            & ~ .guide-text {
+                color: $color-grey-700;
+            }
+        }
+    }
+}

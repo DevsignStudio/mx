@@ -4974,6 +4974,130 @@ table {
   border-top: 1px solid #eeeeee;
   padding: 4px 12px; }
 
+.input-textfield {
+  height: 48px;
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px; }
+  .input-textfield input[type="text"] {
+    background: transparent;
+    border: 0;
+    font-size: 16px;
+    padding: 0;
+    padding-top: 16px;
+    padding-bottom: 8px;
+    width: 100%;
+    color: #424242;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 7px; }
+  .input-textfield input::-webkit-input-placeholder {
+    color: #9e9e9e; }
+  .input-textfield input:-moz-placeholder {
+    /* Firefox 18- */
+    color: #9e9e9e; }
+  .input-textfield input::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #9e9e9e; }
+  .input-textfield input:-ms-input-placeholder {
+    color: #9e9e9e; }
+  .input-textfield input + .border-line {
+    height: 2px;
+    width: 100%;
+    border-bottom: 2px solid #2196f3;
+    position: absolute;
+    bottom: 7px;
+    left: 0;
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    -o-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+    -moz-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+    -ms-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+    -o-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+    transition: transform 0.4s cubic-bezier(1, 0, 0, 1); }
+  .input-textfield input:focus + .border-line {
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    -o-transform: scaleX(1);
+    transform: scaleX(1); }
+  .input-textfield input ~ .guide-text {
+    font-size: 12px;
+    line-height: 12px;
+    opacity: 0;
+    color: #2196f3;
+    -webkit-transform: translateY(-20px);
+    -moz-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    -o-transform: translateY(-20px);
+    transform: translateY(-20px);
+    -webkit-transition: opacity 0.4s cubic-bezier(1, 0, 0, 1), transform 0.4s cubic-bezier(1, 0, 0, 1);
+    -moz-transition: opacity 0.4s cubic-bezier(1, 0, 0, 1), transform 0.4s cubic-bezier(1, 0, 0, 1);
+    -ms-transition: opacity 0.4s cubic-bezier(1, 0, 0, 1), transform 0.4s cubic-bezier(1, 0, 0, 1);
+    -o-transition: opacity 0.4s cubic-bezier(1, 0, 0, 1), transform 0.4s cubic-bezier(1, 0, 0, 1);
+    transition: opacity 0.4s cubic-bezier(1, 0, 0, 1), transform 0.4s cubic-bezier(1, 0, 0, 1); }
+  .input-textfield input:focus ~ .guide-text {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0); }
+  .input-textfield input.error + .border-line, .input-textfield input.success + .border-line {
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    -o-transform: scaleX(1);
+    transform: scaleX(1); }
+  .input-textfield input.error ~ .guide-text, .input-textfield input.success ~ .guide-text {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0); }
+  .input-textfield input.error + .border-line {
+    border-bottom: 2px solid #f44336; }
+  .input-textfield input.error ~ .guide-text {
+    color: #f44336; }
+  .input-textfield input.success + .border-line {
+    border-bottom: 2px solid #4caf50; }
+  .input-textfield input.success ~ .guide-text {
+    color: #4caf50; }
+  .input-textfield input:disabled {
+    border-bottom: 1px dashed #bdbdbd;
+    color: #9e9e9e; }
+    .input-textfield input:disabled + .border-line {
+      -webkit-transform: scaleX(0);
+      -moz-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+      -o-transform: scaleX(0);
+      transform: scaleX(0); }
+    .input-textfield input:disabled ~ .guide-text {
+      color: #9e9e9e; }
+  .input-textfield input.inverse {
+    color: #bdbdbd;
+    border-bottom: 1px solid #424242; }
+    .input-textfield input.inverse::-webkit-input-placeholder {
+      color: #616161; }
+    .input-textfield input.inverse:-moz-placeholder {
+      /* Firefox 18- */
+      color: #616161; }
+    .input-textfield input.inverse::-moz-placeholder {
+      /* Firefox 19+ */
+      color: #616161; }
+    .input-textfield input.inverse:-ms-input-placeholder {
+      color: #616161; }
+    .input-textfield input.inverse:focus {
+      color: #eeeeee; }
+    .input-textfield input.inverse:disabled {
+      border-bottom: 1px dashed #424242;
+      color: #616161; }
+      .input-textfield input.inverse:disabled ~ .guide-text {
+        color: #616161; }
+
 .no-margin {
   margin: 0; }
 
