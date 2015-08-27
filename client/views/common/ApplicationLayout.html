@@ -7,6 +7,29 @@
     <title>MX template</title>
 </head>
 <body>
+    {{> Router}}
+</body>
+
+<template name="ApplicationLayout">
+    {{> yield "navigation"}}
+
+    {{> yield "toolbar"}}
+
+    {{> yield}}
+</template>
+
+<template name="defaultToolbar">
+    <div class="toolbar above">
+    	<div class="toolbar-background">
+    		<div class="ripple-background background-brown"></div>
+    	</div>
+    	<div class="toolbar-contain">
+    		<a href="javascript:;" data-side-navigation=".side-navigation" class="icon-button white ripple"><i class="mdi mdi-menu"></i></a>
+    	</div>
+    </div>
+</template>
+
+<template name="defaultNavigation">
     <div class="side-navigation dont-count">
         <div class="side-navigation-inner">
             <div class="nav-top">
@@ -21,7 +44,7 @@
                 <div class="nav-menu">
                     <a class="nav-list active" href="/"><i class="mdi mdi-home"></i> Dashboard Panel</a>
                     <a class="nav-list submenu" href="javascript:;"><i class="mdi mdi-palette-advanced"></i> UI Components</a>
-                    <div class="nav-sublist show">
+                    <div class="nav-sublist">
                         <a class="nav-list" href="/ui/sheet"><i class="mdi mdi-checkbox-multiple-blank"></i>Paper Shadow</a>
                         <a class="nav-list" href="/ui/color"><i class="mdi mdi-palette"></i>Color Palette</a>
                         <a class="nav-list" href="/ui/button"><i class="mdi mdi-crop-landscape"></i>Basic Button</a>
@@ -31,23 +54,12 @@
                         <a class="nav-list" href="/ui/table"><i class="mdi mdi-table-large"></i>Table</a>
                         <a class="nav-list" href="/ui/textfield"><i class="mdi mdi-label"></i>Text Fields</a>
                     </div>
+                    <a class="nav-list submenu" href="javascript:;"><i class="mdi mdi-palette-advanced"></i> Templates</a>
+                    <div class="nav-sublist show">
+                        <a class="nav-list" href="/templates/landing"><i class="mdi mdi-checkbox-multiple-blank"></i> Landing Page</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="toolbar above">
-    	<div class="toolbar-background">
-    		<div class="ripple-background background-brown"></div>
-    	</div>
-    	<div class="toolbar-contain">
-    		<a href="javascript:;" data-side-navigation=".side-navigation" class="icon-button white ripple"><i class="mdi mdi-menu"></i></a>
-    	</div>
-    </div>
-
-    {{> Router}}
-
-</body>
-
-<template name="ApplicationLayout">
-    {{> yield}}
 </template>

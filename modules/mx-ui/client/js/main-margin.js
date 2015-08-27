@@ -11,18 +11,18 @@ Mx.doAfterRouterLoad(function(){
         	height: parentHeight - $height + $margin
         });
 
-        $pageCon = $(".page-container");
 
-        $pageCon.each(function() {
+    });
+    $pageCon = $(".page-container");
 
-            $(this).removeClass("mCustomScrollbar _mCS_1 mCS-autoHide");
-            $(this).mCustomScrollbar({
-                axis:"y",
-                theme:"minimal-dark",
-                scrollInertia: 300
-            });
+    $pageCon.each(function() {
+
+        $(this).removeClass("mCustomScrollbar _mCS_1 mCS-autoHide");
+        $(this).mCustomScrollbar({
+            axis:"y",
+            theme:"minimal-dark",
+            scrollInertia: 300
         });
-
     });
 
 });
