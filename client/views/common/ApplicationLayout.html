@@ -16,6 +16,16 @@
     {{> yield "toolbar"}}
 
     {{> yield}}
+
+    <style class="dont-count">
+        {{> yield "style"}}
+    </style>
+
+    <script charset="utf-8">
+        {{> yield "js"}}
+    </script>
+
+
 </template>
 
 <template name="defaultToolbar">

@@ -4517,7 +4517,7 @@ button.raised-button, a.raised-button, button.flat-button, a.flat-button {
     position: absolute;
     top: 0;
     left: 0;
-    background: #3f51b5;
+    background: #2196f3;
     overflow: hidden; }
   .toolbar.seam {
     /*default is seam*/ }
@@ -4875,7 +4875,7 @@ button.raised-button, a.raised-button, button.flat-button, a.flat-button {
   .mx-checkbox .mx-checkbox-outline {
     fill: #757575; }
   .mx-checkbox .mx-checkbox-box {
-    fill: #3f51b5;
+    fill: #2196f3;
     opacity: 0;
     -webkit-transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1);
     -moz-transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1);
@@ -4905,7 +4905,7 @@ button.raised-button, a.raised-button, button.flat-button, a.flat-button {
   .mx-checkbox.checked .mx-checkbox-box {
     opacity: 1; }
   .mx-checkbox.checked .checkbox-ripple {
-    background: #3f51b5; }
+    background: #2196f3; }
   .mx-checkbox.disabled {
     pointer-events: none; }
     .mx-checkbox.disabled .mx-checkbox-outline,

@@ -1,17 +1,3 @@
-BaseController = RouteController.extend({
-    layoutTemplate:"ApplicationLayout",
-    notFoundTemplate:"404",
-    yieldTemplates: {
-       'defaultToolbar': {to: 'toolbar'},
-       'defaultNavigation': {to: "navigation"}
-    },
-});
-
-// Router.route("/", {
-//     path: '/documents',
-//     controller: 'BaseController'
-// });
-
 Router.route('/', {
     controller: 'BaseController',
     template: 'indexLayout'
@@ -57,9 +43,7 @@ Router.route('/ui/textfield', {
     template: 'uiTextfieldLayout'
 });
 
-// Router.route("/templates/landing", function() {
-//     if (this.ready()) {
-//         this.layout("layout1");
-//         this.render("templatesLandingLayout");
-//     }
-// });
+Router.route('/templates/landing', {
+    controller: 'BaseController',
+    template: 'templatesLandingLayout'
+});

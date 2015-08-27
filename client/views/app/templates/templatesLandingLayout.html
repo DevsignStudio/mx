@@ -1,14 +1,8 @@
 <template name="templatesLandingLayout">
-    <div class="page-container">
-        <style class="dont-count">
-            .page-container .mCSB_container {
-                height: 100%;
-            }
+    {{#contentFor "toolbar"}}
 
-            .page-container {
-                height: 100%;
-            }
-        </style>
+    {{/contentFor}}
+    <div class="page-container">
         <div class="row" style="height: 100%">
             <div class="col-xs background-red" style="height: 100%">
 
@@ -18,4 +12,15 @@
             </div>
         </div>
     </div>
+
+    {{#contentFor "style"}}
+    .page-container .mCSB_container {
+        height: 100%;
+    }
+
+    .page-container {
+        height: 100%;
+    }
+    {{/contentFor}}
+    
 </template>
