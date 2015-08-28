@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,UAAW;EACP,MAAM,EAAE,CAAC",
-"sources": ["../../../scss/mx/extends/margin.scss"],
-"names": [],
-"file": "margin.css"
-}

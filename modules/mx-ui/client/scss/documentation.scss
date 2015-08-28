@@ -43,13 +43,24 @@ color: $color-grey-900;
 	}
 }
 
-.code-block {
-	background: $color-white;
-	@include border-radius(2px);
-	@include box-shadow-z1;
-	margin-bottom: 16px;
-	& pre, & code {
-		background: $color-white;
+.code-view {
+	background:$color-grey-200;
+	padding:8px 24px;
+	width: 100%;
+	overflow-x: auto;
+
+	pre {
+		background:inherit;
+		font-size: 12px !important;
+		margin: 0;
+		padding: 0;
+
+		code {
+			font-size: inherit !important;
+			span {
+				font-size: inherit !important;
+			}
+		}
 	}
 }
 

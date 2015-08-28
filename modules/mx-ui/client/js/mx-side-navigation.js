@@ -40,7 +40,7 @@ $.fn.mxSideNavigation = function(args) {
 
 			$next.css({
 				"margin-top": "-"+ $nextHeight + "px",
-				"transition": "margin-top "+ $nextHeight/48 * 0.11 + "s ease-in-out",
+				"transition": "margin-top 0.3s ease-in-out",
 				"z-index" : $index
 			});
 			$index -= 1;

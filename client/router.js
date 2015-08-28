@@ -28,9 +28,9 @@ Router.route('/ui/cards', {
     template: 'uiCardsLayout'
 });
 
-Router.route('/ui/checkbox', {
+Router.route('/ui/toggles', {
     controller: 'BaseController',
-    template: 'uiCheckboxLayout'
+    template: 'uiTogglesLayout'
 });
 
 Router.route('/ui/table', {

@@ -110,10 +110,7 @@ sub, sup {
 }
 
 sup {
-	top: -0.5em;
-}
-
-sub {
+	top: -0.5em;background:#fff;
 	bottom: -0.25em;
 }
 
@@ -228,30 +225,6 @@ a{
 
 .font-thin {
 	font-weight: 100;
-}
-
-.font-grey {
-	color: $color-grey;
-}
-
-.font-grey-700 {
-	color: $color-grey-700;
-}
-
-.font-grey-800 {
-	color: $color-grey-800;
-}
-
-.font-grey-900 {
-	color: $color-grey-900;
-}
-
-.font-grey-200 {
-	color: $color-grey-200;
-}
-
-.font-white {
-	color: $color-white;
 }
 
 .font-ex1 {
