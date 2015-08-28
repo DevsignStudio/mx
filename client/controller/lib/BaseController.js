@@ -4,8 +4,5 @@ BaseController = RouteController.extend({
     yieldTemplates: {
        'defaultToolbar': {to: 'toolbar'},
        'defaultNavigation': {to: "navigation"}
-    },
-    action: function () {
-        this.render();
     }
 });

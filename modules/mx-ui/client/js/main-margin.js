@@ -13,10 +13,11 @@ Mx.doAfterRouterLoad(function(){
 
 
     });
+
     $pageCon = $(".page-container");
 
     $pageCon.each(function() {
-
+        console.log("get");
         $(this).removeClass("mCustomScrollbar _mCS_1 mCS-autoHide");
         $(this).mCustomScrollbar({
             axis:"y",

@@ -1,0 +1,34 @@
+.round-button {
+    width: 100%;
+    height: 48px;
+    @include border-radius(24px);
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    cursor:pointer;
+    text-transform: uppercase;
+    line-height: 48px;
+    font-size: 14px;
+    border: 2px solid $theme-primary;
+    color: $theme-primary-dark;
+    @include transition(all 0.5s $easeInOutExpo);
+    margin-bottom: 8px;
+    position: relative;
+    @include translateZ(0);
+
+    &:hover {
+        background: $theme-primary;
+        color: $color-white;
+    }
+
+    &.accent {
+        border: 2px solid $theme-accent;
+        color: $theme-accent-dark;
+
+        &:hover {
+            background: $theme-accent;
+            color: $color-white;
+        }
+    }
+}

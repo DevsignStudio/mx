@@ -4,7 +4,8 @@
     position: relative;
     margin-bottom: 20px;
 
-    input[type="text"] {
+    input[type="text"], 
+    input[type="password"] {
         background: transparent;
         border: 0;
         font-size: 16px;
