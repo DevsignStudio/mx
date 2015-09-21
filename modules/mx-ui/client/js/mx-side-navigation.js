@@ -6,7 +6,11 @@ $.fn.mxSideNavigation = function(args) {
     args = $.extend(true, {}, Defaults, args);
     var $element = $(this);
     var $target = $(args.target);
-    $target.prepend('<div class="side-overlay"></div>');
+
+    if($target.has( ".side-overlay" ).length === 0) {
+        $target.prepend('<div class="side-overlay"></div>');
+    }
+
     var $targetOverlay = $target.find(".side-overlay");
     var $navlists = $target.find(".nav-list");
 
