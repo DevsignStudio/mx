@@ -443,23 +443,23 @@ $raised-button-pressed-shadow: 0   6px 5px rgba(#000, 0.09), 0 7px 6px rgba(#000
 }
 
 @mixin ty-body2 {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 500;
     line-height: 20px;
 
 	@include breakpoint("xd") {
-		font-size: 14px;
+		font-size: 13px;
 		line-height: 24px;
 	}
 }
 
 @mixin ty-body {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: normal;
     line-height: 20px;
 
 	@include breakpoint("xd") {
-		font-size: 14px;
+		font-size: 13px;
 		line-height: 24px;
 	}
 }
@@ -471,9 +471,13 @@ $raised-button-pressed-shadow: 0   6px 5px rgba(#000, 0.09), 0 7px 6px rgba(#000
 }
 
 @mixin ty-menu {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 500;
     line-height: 20px;
+
+	@include breakpoint("xd") {
+		font-size: 13px;
+	}
 }
 
 @mixin ty-button {

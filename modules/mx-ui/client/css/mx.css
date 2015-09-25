@@ -356,23 +356,23 @@ a {
   margin-bottom: 16px; }
 
 .font-body, .cards .cards-header .cards-header-title, .cards .cards-header .cards-header-subtitle {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: normal;
   line-height: 20px;
   margin-bottom: 16px; }
   @media (min-width: 768px) {
     .font-body, .cards .cards-header .cards-header-title, .cards .cards-header .cards-header-subtitle {
-      font-size: 14px;
+      font-size: 13px;
       line-height: 24px; } }
 
 .font-body2 {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
   line-height: 20px;
   margin-bottom: 16px; }
   @media (min-width: 768px) {
     .font-body2 {
-      font-size: 14px;
+      font-size: 13px;
       line-height: 24px; } }
 
 .font-caption {
@@ -4639,8 +4639,8 @@ button.raised-button, a.raised-button, button.flat-button, a.flat-button {
       background-size: cover;
       position: relative; }
       .side-navigation .side-navigation-inner .nav-profile img {
-        width: 64px;
-        height: 64px;
+        width: 48px;
+        height: 48px;
         display: block;
         -webkit-border-radius: 50%;
         border-radius: 50%;
@@ -4649,7 +4649,7 @@ button.raised-button, a.raised-button, button.flat-button, a.flat-button {
         position: relative;
         z-index: 1; }
       .side-navigation .side-navigation-inner .nav-profile .profile-name {
-        font-size: 13px;
+        font-size: 12px;
         font-weight: normal;
         line-height: 20px;
         font-weight: 500;
@@ -4660,7 +4660,7 @@ button.raised-button, a.raised-button, button.flat-button, a.flat-button {
         display: table; }
         @media (min-width: 768px) {
           .side-navigation .side-navigation-inner .nav-profile .profile-name {
-            font-size: 14px;
+            font-size: 13px;
             line-height: 24px; } }
       .side-navigation .side-navigation-inner .nav-profile .overlay {
         background: #000000;
@@ -4672,7 +4672,7 @@ button.raised-button, a.raised-button, button.flat-button, a.flat-button {
         left: 0;
         z-index: 0; }
       .side-navigation .side-navigation-inner .nav-profile .profile-email {
-        font-size: 13px;
+        font-size: 12px;
         font-weight: normal;
         line-height: 20px;
         font-weight: 400;
@@ -4681,10 +4681,10 @@ button.raised-button, a.raised-button, button.flat-button, a.flat-button {
         z-index: 1; }
         @media (min-width: 768px) {
           .side-navigation .side-navigation-inner .nav-profile .profile-email {
-            font-size: 14px;
+            font-size: 13px;
             line-height: 24px; } }
     .side-navigation .side-navigation-inner .nav-content {
-      height: calc(100% -56px);
+      height: calc(100% - 56px);
       width: 100%;
       overflow: auto; }
       @media (min-width: 768px) {
@@ -4699,7 +4699,7 @@ button.raised-button, a.raised-button, button.flat-button, a.flat-button {
           display: block;
           position: relative;
           padding: 8px 12px;
-          font-size: 13px;
+          font-size: 12px;
           font-weight: 500;
           line-height: 20px;
           line-height: 33px;
@@ -4713,6 +4713,9 @@ button.raised-button, a.raised-button, button.flat-button, a.flat-button {
           transition: background 0.3s ease-in-out;
           z-index: 3;
           font-weight: 500; }
+          @media (min-width: 768px) {
+            .side-navigation .side-navigation-inner .nav-content .nav-menu .nav-list {
+              font-size: 13px; } }
           .side-navigation .side-navigation-inner .nav-content .nav-menu .nav-list:hover {
             background: #eeeeee; }
           .side-navigation .side-navigation-inner .nav-content .nav-menu .nav-list .mdi {
