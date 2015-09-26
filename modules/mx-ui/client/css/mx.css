@@ -4527,12 +4527,13 @@ button.raised-button, a.raised-button, button.flat-button, a.flat-button {
 .toolbar {
   position: relative;
   border-bottom: 1px solid #e0e0e0;
-  height: 56px;
   width: 100%; }
-  .toolbar .toolbar-contain .icon-button {
-    width: 56px;
-    height: 56px;
-    padding: 16px; }
+  .toolbar .toolbar-contain {
+    height: 56px; }
+    .toolbar .toolbar-contain .icon-button {
+      width: 56px;
+      height: 56px;
+      padding: 16px; }
   .toolbar .toolbar-background {
     width: 100%;
     height: 100%;
@@ -4561,7 +4562,7 @@ button.raised-button, a.raised-button, button.flat-button, a.flat-button {
     .toolbar.cover .toolbar-background {
       background: transparent; }
   @media (min-width: 768px) {
-    .toolbar {
+    .toolbar .toolbar-contain {
       height: 64px; }
       .toolbar .toolbar-contain .icon-button {
         width: 64px;
@@ -4684,12 +4685,9 @@ button.raised-button, a.raised-button, button.flat-button, a.flat-button {
             font-size: 13px;
             line-height: 24px; } }
     .side-navigation .side-navigation-inner .nav-content {
-      height: calc(100% - 56px);
+      height: 100%;
       width: 100%;
       overflow: auto; }
-      @media (min-width: 768px) {
-        .side-navigation .side-navigation-inner .nav-content {
-          height: calc(100% - 64px); } }
       .side-navigation .side-navigation-inner .nav-content .nav-menu {
         margin-top: 8px;
         overflow: hidden; }

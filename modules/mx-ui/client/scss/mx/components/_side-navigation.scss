@@ -80,11 +80,12 @@
 		}
 
 		& .nav-content {
-			height: calc(100% - 56px);
+			//height: calc(100% - 56px);
+			height:100%;
 			width: 100%;
 			overflow: auto;
 			@include breakpoint("xd") {
-				height: calc(100% - 64px);
+				//height: calc(100% - 64px);
 			}
 
 			.nav-menu {

@@ -11,11 +11,12 @@
 .toolbar {
 	position: relative;
 	border-bottom: 1px solid $color-grey-300;
-	height: 56px;
+	//height: 120px;
 	width: 100%;
 
 
 	.toolbar-contain {
+		height: 56px;
 		& .icon-button {
 			width: 56px;
 			height: 56px;
@@ -60,9 +61,8 @@
 
 
 	@include breakpoint("xd") {
-		height: 64px;
-
 		& .toolbar-contain {
+			height: 64px;
 			& .icon-button {
 				width: 64px;
 				height: 64px;

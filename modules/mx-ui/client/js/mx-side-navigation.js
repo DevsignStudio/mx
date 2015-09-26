@@ -95,7 +95,7 @@ $.fn.mxSideNavigation = function(args) {
     });
 
     function afterInActive() {
-        $targetOverlay.on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd', function() {
+        $target.on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd', function() {
 
             if (!$target.hasClass("active")) {
                 $target.css({
