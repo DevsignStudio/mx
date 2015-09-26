@@ -14,16 +14,35 @@ Mx.doAfterRouterLoad(function(){
 
     });
 
-    $pageCon = $(".page-container");
+    var deviceAgent = navigator.userAgent.toLowerCase();
 
-    $pageCon.each(function() {
-        console.log("get");
-        $(this).removeClass("mCustomScrollbar _mCS_1 mCS-autoHide");
-        $(this).mCustomScrollbar({
-            axis:"y",
-            theme:"minimal-dark",
-            scrollInertia: 300
+    var isTouchDevice = Modernizr.touch ||
+    (deviceAgent.match(/(iphone|ipod|ipad)/) ||
+    deviceAgent.match(/(android)/)  ||
+    deviceAgent.match(/(iemobile)/) ||
+    deviceAgent.match(/iphone/i) ||
+    deviceAgent.match(/ipad/i) ||
+    deviceAgent.match(/ipod/i) ||
+    deviceAgent.match(/blackberry/i) ||
+    deviceAgent.match(/bada/i));
+
+    if (isTouchDevice) {
+        $pageCon = $(".page-container");
+
+        $pageCon.each(function() {
+            $pageCon.css("overflow", "auto");
+        })
+    } else {
+        $pageCon = $(".page-container");
+
+        $pageCon.each(function() {
+            $(this).removeClass("mCustomScrollbar _mCS_1 mCS-autoHide");
+            $(this).mCustomScrollbar({
+                axis:"y",
+                theme:"minimal-dark",
+                scrollInertia: 300
+            });
         });
-    });
+    }
 
 });
