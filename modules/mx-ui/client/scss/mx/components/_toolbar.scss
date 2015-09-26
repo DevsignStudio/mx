@@ -9,11 +9,13 @@
 
 
 .toolbar {
-	position: relative;
-	border-bottom: 1px solid $color-grey-300;
-	//height: 120px;
+	position: absolute;
+	border: 0;
 	width: 100%;
-
+	@include box-shadow-z1;
+	top: 0;
+	left: 0;
+	z-index: 800;
 
 	.toolbar-contain {
 		height: 56px;

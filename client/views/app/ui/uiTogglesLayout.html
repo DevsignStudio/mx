@@ -1,33 +1,31 @@
 <template name="uiTogglesLayout">
-    <div class="page-container">
-        <div class="paper background-grey-100" style="padding-top: 24px; padding-bottom: 24px;">
-            <div class="row center-xs">
-                <div class="col-md-3">
-                    <div style="margin: 0 auto;">
-                        <input type="checkbox" data-mx-checkbox>
-                        <span style="line-height:24px; padding-left:12px;">Checkbox</span>
-                    </div>
+    <div class="paper background-grey-100" style="padding-top: 24px; padding-bottom: 24px;">
+        <div class="row center-xs">
+            <div class="col-md-3">
+                <div style="margin: 0 auto;">
+                    <input type="checkbox" data-mx-checkbox>
+                    <span style="line-height:24px; padding-left:12px;">Checkbox</span>
                 </div>
-                <div class="col-md-3">
-                    <div style="margin: 0 auto;">
-                        <input type="checkbox" checked="" data-mx-checkbox>
-                        <span style="line-height:24px; padding-left:12px;">Checkbox</span>
-                    </div>
+            </div>
+            <div class="col-md-3">
+                <div style="margin: 0 auto;">
+                    <input type="checkbox" checked="" data-mx-checkbox>
+                    <span style="line-height:24px; padding-left:12px;">Checkbox</span>
                 </div>
             </div>
         </div>
-        <div class="paper background-white" style="text-align:center;padding-top: 14px; padding-bottom: 14px;">
-            <div class="row center-xs">
-                <div class="col-md-3 font-caption no-margin color-grey-700">Check On</div>
-                <div class="col-md-3 font-caption no-margin color-grey-700">Check Off</div>
-            </div>
+    </div>
+    <div class="paper background-white" style="text-align:center;padding-top: 14px; padding-bottom: 14px;">
+        <div class="row center-xs">
+            <div class="col-md-3 font-caption no-margin color-grey-700">Check On</div>
+            <div class="col-md-3 font-caption no-margin color-grey-700">Check Off</div>
         </div>
-        <div class="code-view">
-            {{>TogglesCode1}}
-        </div>
-        <div class="code-view">
-            {{>TogglesCode2}}
-        </div>
+    </div>
+    <div class="code-view">
+        {{>TogglesCode1}}
+    </div>
+    <div class="code-view">
+        {{>TogglesCode2}}
     </div>
 </template>
 
