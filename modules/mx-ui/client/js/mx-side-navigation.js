@@ -83,13 +83,20 @@ $.fn.mxSideNavigation = function(args) {
     			});
             }
 		} else {
-			$(this).on("click", function() {
-				var $activeNav = $target.find(".nav-list.active");
+			$(this).on("click", function(e) {
+                e.preventDefault();                   // prevent default anchor behavior
+                var goTo = this.getAttribute("href"); // store anchor href
+
+                var $activeNav = $target.find(".nav-list.active");
 				$activeNav.removeClass("active");
 				$(this).addClass("active");
 
 				$target.removeClass("active");
 				afterInActive();
+
+                $target.on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd', function() {
+                    window.location = goTo;
+                });
 			});
 		}
     });
