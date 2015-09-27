@@ -20,6 +20,7 @@
 
 	.toolbar-contain {
 		height: 56px;
+		@include transform(translateZ(0));
 		& .icon-button {
 			width: 56px;
 			height: 56px;
@@ -27,7 +28,9 @@
 		}
 	}
 
-	.fix-after {
+	&.fix-after {
+		//position: fixed;
+		//@include transition(top 0.01s linear);
 	}
 
 	.toolbar-background {
