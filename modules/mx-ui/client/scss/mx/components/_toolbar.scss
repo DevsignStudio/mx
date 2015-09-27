@@ -12,10 +12,11 @@
 	position: absolute;
 	border: 0;
 	width: 100%;
-	@include box-shadow-z1;
+	@include box-shadow($z1-shadow);
 	top: 0;
 	left: 0;
 	z-index: 800;
+	@include transform(translateZ(0));
 
 	.toolbar-contain {
 		height: 56px;
@@ -24,6 +25,9 @@
 			height: 56px;
 			padding: 16px;
 		}
+	}
+
+	.fix-after {
 	}
 
 	.toolbar-background {
@@ -44,7 +48,7 @@
 		position: fixed;
 		top: 0;
 		left: 0;
-		@include box-shadow-z1;
+		@include box-shadow($z1-shadow);
 		border-bottom: 0;
 		z-index: 200;
 	}
