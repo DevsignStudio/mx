@@ -4,7 +4,7 @@
     position: relative;
     margin-bottom: 20px;
 
-    input[type="text"], 
+    input[type="text"],
     input[type="password"] {
         background: transparent;
         border: 0;
@@ -39,7 +39,7 @@
         width: 100%;
         border-bottom: 2px solid $color-blue;
         position: absolute;
-        bottom: 7px;
+        bottom: 4px;
         left: 0;
         @include transform(scaleX(0));
         @include transition(transform 0.4s $easeInOutExpo);
