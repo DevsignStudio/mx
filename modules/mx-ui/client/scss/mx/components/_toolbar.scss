@@ -30,7 +30,7 @@
 
 	&.fix-after {
 		//position: fixed;
-		//@include transition(top 0.01s linear);
+		//@include transition(top 0.01s ease-in-out);
 	}
 
 	.toolbar-background {
