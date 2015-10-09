@@ -29,3 +29,5 @@ ejson
 spacebars
 check
 cwaring:modernizr
+accolver:twilio-meteor
+ecwyne:nexmo-sms

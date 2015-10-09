@@ -3,3 +3,6 @@ Template.indexLayout.helpers({
         return Posts.find();
     }
 });
+
+
+console.log("everywhere");
