@@ -129,16 +129,16 @@
 					}
 
 					&.active, &:hover {
-						color: $color-blue-500;
+						color: $theme-primary;
 
 
 						.mdi {
-							color: $color-blue-400;
+							color: $theme-primary;
 						}
 
 						& .chevron {
 							svg {
-								fill : $color-blue-400;
+								fill : $theme-primary;
 							}
 						}
 					}

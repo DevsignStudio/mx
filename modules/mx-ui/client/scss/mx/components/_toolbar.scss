@@ -28,6 +28,19 @@
 		}
 	}
 
+	.toolbar-title {
+		@include ty-title;
+		line-height: 56px;
+		color: $color-white;
+		display: inline-block;
+		width: auto;
+		float:left;
+
+		@include breakpoint("xd") {
+			line-height: 64px;
+		}
+	}
+
 	&.fix-after {
 		//position: fixed;
 		//@include transition(top 0.01s ease-in-out);
@@ -99,7 +112,7 @@
 	position: relative;
 	@include transform(translateZ(0));
 	@include border-radius(50%);
-
+	float:left;
 	&.white {
 		color: $color-grey-200;
 	}

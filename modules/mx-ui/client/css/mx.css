@@ -4640,13 +4640,25 @@ button.raised-button, a.raised-button, button.flat-button, a.flat-button {
       width: 56px;
       height: 56px;
       padding: 16px; }
+  .toolbar .toolbar-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    line-height: 56px;
+    color: #ffffff;
+    display: inline-block;
+    width: auto;
+    float: left; }
+    @media (min-width: 768px) {
+      .toolbar .toolbar-title {
+        line-height: 64px; } }
   .toolbar .toolbar-background {
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    background: #2196f3;
+    background: #3f51b5;
     overflow: hidden; }
   .toolbar.seam {
     /*default is seam*/ }
@@ -4697,7 +4709,8 @@ button.raised-button, a.raised-button, button.flat-button, a.flat-button {
   transform: translateZ(0);
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  background-clip: padding-box; }
+  background-clip: padding-box;
+  float: left; }
   .icon-button.white {
     color: #eeeeee; }
 
@@ -4839,11 +4852,11 @@ button.raised-button, a.raised-button, button.flat-button, a.flat-button {
               -o-transform: rotate(90deg);
               transform: rotate(90deg); }
           .side-navigation .side-navigation-inner .nav-content .nav-menu .nav-list.active, .side-navigation .side-navigation-inner .nav-content .nav-menu .nav-list:hover {
-            color: #2196f3; }
+            color: #3f51b5; }
             .side-navigation .side-navigation-inner .nav-content .nav-menu .nav-list.active .mdi, .side-navigation .side-navigation-inner .nav-content .nav-menu .nav-list:hover .mdi {
-              color: #42a5f5; }
+              color: #3f51b5; }
             .side-navigation .side-navigation-inner .nav-content .nav-menu .nav-list.active .chevron svg, .side-navigation .side-navigation-inner .nav-content .nav-menu .nav-list:hover .chevron svg {
-              fill: #42a5f5; }
+              fill: #3f51b5; }
         .side-navigation .side-navigation-inner .nav-content .nav-menu .nav-sublist {
           position: relative;
           z-index: 1;
@@ -5016,7 +5029,7 @@ button.raised-button, a.raised-button, button.flat-button, a.flat-button {
   .mx-checkbox .mx-checkbox-outline {
     fill: #757575; }
   .mx-checkbox .mx-checkbox-box {
-    fill: #2196f3;
+    fill: #3f51b5;
     opacity: 0;
     -webkit-transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1);
     -moz-transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1);
@@ -5046,7 +5059,7 @@ button.raised-button, a.raised-button, button.flat-button, a.flat-button {
   .mx-checkbox.checked .mx-checkbox-box {
     opacity: 1; }
   .mx-checkbox.checked .checkbox-ripple {
-    background: #2196f3; }
+    background: #3f51b5; }
   .mx-checkbox.disabled {
     pointer-events: none; }
     .mx-checkbox.disabled .mx-checkbox-outline,
@@ -5254,8 +5267,8 @@ table {
   text-transform: uppercase;
   line-height: 48px;
   font-size: 14px;
-  border: 2px solid #2196f3;
-  color: #1976d2;
+  border: 2px solid #3f51b5;
+  color: #303f9f;
   -webkit-transition: all 0.5s cubic-bezier(1, 0, 0, 1);
   -moz-transition: all 0.5s cubic-bezier(1, 0, 0, 1);
   -ms-transition: all 0.5s cubic-bezier(1, 0, 0, 1);
@@ -5269,7 +5282,7 @@ table {
   -o-transform: translateZ(0);
   transform: translateZ(0); }
   .round-button:hover {
-    background: #2196f3;
+    background: #3f51b5;
     color: #ffffff; }
   .round-button.accent {
     border: 2px solid #e91e63;
