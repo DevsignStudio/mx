@@ -74,9 +74,7 @@ $.fn.mxSideNavigation = function(args) {
     					});
     					$next.addClass("show");
     				}
-    				var $activeNav = $target.find(".nav-list.active");
-    				$activeNav.removeClass("active");
-    				$(this).addClass("active");
+    				
     				$chevron.toggleClass("show");
 
 

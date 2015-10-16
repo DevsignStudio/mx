@@ -4894,11 +4894,11 @@ button.raised-button, a.raised-button, button.flat-button, a.flat-button {
               -ms-transform: rotate(90deg);
               -o-transform: rotate(90deg);
               transform: rotate(90deg); }
-          .side-navigation .side-navigation-inner .nav-content .nav-menu .nav-list.active, .side-navigation .side-navigation-inner .nav-content .nav-menu .nav-list:hover {
+          .side-navigation .side-navigation-inner .nav-content .nav-menu .nav-list.active {
             color: #3f51b5; }
-            .side-navigation .side-navigation-inner .nav-content .nav-menu .nav-list.active .mdi, .side-navigation .side-navigation-inner .nav-content .nav-menu .nav-list:hover .mdi {
+            .side-navigation .side-navigation-inner .nav-content .nav-menu .nav-list.active .mdi {
               color: #3f51b5; }
-            .side-navigation .side-navigation-inner .nav-content .nav-menu .nav-list.active .chevron svg, .side-navigation .side-navigation-inner .nav-content .nav-menu .nav-list:hover .chevron svg {
+            .side-navigation .side-navigation-inner .nav-content .nav-menu .nav-list.active .chevron svg {
               fill: #3f51b5; }
         .side-navigation .side-navigation-inner .nav-content .nav-menu .nav-sublist {
           position: relative;
