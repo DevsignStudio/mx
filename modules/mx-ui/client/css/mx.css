@@ -5171,6 +5171,10 @@ table {
   border-top: 1px solid #eeeeee;
   padding: 4px 12px; }
 
+.cards-table .cards-table-content {
+  overflow-x: auto;
+  min-height: 0.01%; }
+
 .input-textfield {
   height: 48px;
   width: 100%;
