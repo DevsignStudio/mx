@@ -1,8 +1,8 @@
 Mx.doAfterRouterLoad(function(){
     $("[data-textfield]").each(function() {
-         var $guideText = $(this).data("text-field");
+         var $guideText = $(this).data("textfield");
 
-         if (!$(this).isMeteorOnce("text-field")) {
+         if (!$(this).isMeteorOnce("textfield")) {
              if ($guideText === undefined) {
                  $(this).mxNormalTextField();
              } else {
