@@ -47,3 +47,41 @@ Router.route('/templates/landing', {
     controller: 'BaseController',
     template: 'templatesLandingLayout'
 });
+
+
+// docare Router
+
+Router.route('/docare/user-activity', {
+    controller: 'BaseController',
+    template: 'docareUserActivityLayout'
+});
+
+Router.route('/docare/user-activity-2', {
+    controller: 'BaseController',
+    template: 'docareUserActivity2Layout'
+});
+
+Router.route('/docare/user-doctor-profile', {
+    controller: 'BaseController',
+    template: 'docareUserDoctorProfileLayout'
+});
+
+Router.route('/docare/user-doctor-profile-2', {
+    controller: 'BaseController',
+    template: 'docareUserDoctorProfile2Layout'
+});
+
+Router.route('/docare/doctor-profile', {
+    controller: 'DocareDoctorController',
+    template: 'docareDoctorProfileLayout'
+});
+
+Router.route('/docare/patient-profile', {
+    controller: 'DocareDoctorController',
+    template: 'docarePatientProfileLayout'
+});
+
+Router.route('/docare/login-1', {
+    controller: 'DocareLoginController',
+    template: 'docareLogin1Layout'
+});

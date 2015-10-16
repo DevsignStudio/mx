@@ -1,6 +1,13 @@
-.middle-top {
+.middle-top,
+.middle-vertical {
 	top: 50%;
 	@include transform(translateY(-50%));
+	position: absolute;
+}
+
+.middle-horizontal {
+	left: 50%;
+	@include transform(translateX(-50%));
 	position: absolute;
 }
 

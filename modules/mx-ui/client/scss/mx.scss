@@ -7,11 +7,12 @@
 @import "mx/base/normalize";
 @import "mx/base/typography";
 @import "mx/base/background";
-@import "mx/base/font-color";
 @import "mx/base/paper";
 @import "mx/base/flexbox";
 @import "mx/base/box-shadow";
 @import "mx/base/ripple";
+@import "mx/base/position";
+@import "mx/base/font-color";
 
 /* COMPONENTS */
 
@@ -26,7 +27,10 @@
 @import "mx/components/textfield";
 
 @import "mx/extends/round-button";
+@import "mx/extends/cards-profile";
+@import "mx/extends/login1";
 
 @import "mx/templates/login-landing";
 
 @import "mx/extends/margin";
+@import "mx/base/webkit-fix";
