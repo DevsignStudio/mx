@@ -1,0 +1,51 @@
+.cards-profile {
+    .cards-profile-image-header {
+        width: 100%;
+        position: relative;
+        padding-bottom: 20%;
+        background: $theme-primary;
+        overflow: hidden;
+
+        .cards-profile-image-header-background {
+            max-width: 100%;
+            width: 100%;
+            position: absolute;
+            @extend .middle-top;
+        }
+    }
+
+    .cards-profile-content {
+        padding: 16px;
+        position: relative;
+
+        img.cards-profile-content-account {
+            border: 2px solid $color-white;
+            @include border-radius(50%);
+            width: 48px;
+            height: 48px;
+            @extend .middle-horizontal;
+            top: -30px;
+        }
+
+        .account-verify {
+            vertical-align: middle;
+            color: $color-blue;
+            margin-left: 8px;
+            margin-right: 8px;
+        }
+    }
+
+
+    &.style-2 {
+        .cards-profile-image-header {
+            padding-bottom: 55%;
+            img.cards-profile-content-account {
+                border: 2px solid $color-white;
+                @include border-radius(50%);
+                width: 56px;
+                height: 56px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
