@@ -6,7 +6,7 @@ $.fn.mxNormalTextField = function(args) {
     args = $.extend(true, {}, Defaults, args);
     var $element = $(this);
     var $border = $('<div class="border-line"></div>');
-    var $guideText = $('<div class="guide-text"></div>');
+    var $guideText = $('<div class="guide-text">'+ args.guideText +'</div>');
 
     $element.wrap( '<div class="input-textfield"></div>' );
     var $parent = $element.parent();
