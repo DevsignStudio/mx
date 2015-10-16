@@ -12,17 +12,17 @@ button.raised-button,a.raised-button {
 
 	&.primary {
 		color: $color-white;
-		background:$color-blue-500;
+		background:$theme-primary-500;
 		&:hover {
-			background:$color-blue-600;
+			background:$theme-primary-600;
 		}
 	}
 
 	&.secondary {
 		color: $color-white;
-		background:$color-pink-500;
+		background:$theme-accent-500;
 		&:hover {
-			background:$color-pink-600;
+			background:$theme-accent-600;
 		}
 	}
 
@@ -43,11 +43,11 @@ button.flat-button, a.flat-button {
 	}
 
 	&.primary {
-		color: $color-blue;
+		color: $theme-primary;
 	}
 
 	&.secondary {
-		color: $color-pink;
+		color: $theme-accent;
 	}
 
 	&:disabled, &.disabled, &.disabled:focus, &.disabled:hover {
@@ -98,5 +98,14 @@ button.raised-button,a.raised-button, button.flat-button, a.flat-button {
 		padding-top: 5px;
 		padding-bottom: 2px;
 	}
-}
 
+	.mdi {
+		float: left;
+		margin-right: 4px;
+		opacity: 0.8;
+
+		&:before {
+			font-size: 22px;
+		}
+	}
+}
