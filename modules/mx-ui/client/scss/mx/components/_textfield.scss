@@ -1,3 +1,5 @@
+$active-color : $color-blue;
+
 .input-textfield {
     height: 48px;
     width: 100%;
@@ -37,7 +39,7 @@
     input + .border-line  {
         height: 2px;
         width: 100%;
-        border-bottom: 2px solid $color-blue;
+        border-bottom: 2px solid $active-color;
         position: absolute;
         bottom: 4px;
         left: 0;
@@ -53,7 +55,7 @@
         font-size: 12px;
         line-height: 12px;
         opacity: 0;
-        color: $color-blue;
+        color: $active-color;
         @include transform(translateY(-20px));
         @include transition((opacity 0.4s $easeInOutExpo, transform 0.4s $easeInOutExpo));
     }
@@ -138,6 +140,78 @@
             & ~ .guide-text {
                 color: $color-grey-700;
             }
+        }
+    }
+}
+
+.input-floating-field {
+    @extend .input-textfield;
+
+    input::-webkit-input-placeholder {
+       color: transparent;
+    }
+
+    input:-moz-placeholder { /* Firefox 18- */
+       color: transparent;
+    }
+
+    input::-moz-placeholder {  /* Firefox 19+ */
+       color: transparent;
+    }
+
+    input:-ms-input-placeholder {
+       color: transparent;
+    }
+
+    input ~ .input-placeholder {
+        position: absolute;
+        top: 14px;
+        left: 0;
+        background: transparent;
+        border: 0;
+        font-size: 16px;
+        padding: 0;
+        width: 100%;
+        color: $color-grey-500;
+        cursor: text;
+        @include transition((all 0.4s $easeOutExpo));
+        @extend .unselectable;
+        &.active {
+            font-size: 12px;
+            @include transform(translateY(-18px) );
+        }
+    }
+
+    &.active {
+         .border-line {
+            @include transform(scaleX(1));
+        }
+
+        .guide-text {
+            opacity: 1;
+            @include transform(translateY(0));
+        }
+
+        .input-placeholder {
+            color: $active-color;
+        }
+    }
+
+    input.error {
+        & ~ .input-placeholder {
+            color: $color-red;
+        }
+    }
+
+    input.success {
+        & ~ .input-placeholder {
+            color: $color-green;
+        }
+    }
+
+    input:disabled {
+        & ~ .input-placeholder {
+            color: $color-grey-500;
         }
     }
 }

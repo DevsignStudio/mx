@@ -15,8 +15,7 @@ $.fn.isMeteorOnce = function(dataName) {
 
     if ($domElement.hasAttr("data-once-"+dataName)) {
         return true;
-    } 
+    }
     $domElement.attr("data-once-"+dataName, "");
     return false;
-
 };
