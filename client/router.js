@@ -43,9 +43,9 @@ Router.route('/ui/textfield', {
     template: 'uiTextfieldLayout'
 });
 
-Router.route('/templates/landing', {
+Router.route('/ui/select', {
     controller: 'BaseController',
-    template: 'templatesLandingLayout'
+    template: 'uiSelectLayout'
 });
 
 

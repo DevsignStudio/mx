@@ -1,0 +1,89 @@
+.input-select {
+    height: 48px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $color-grey-300;
+    cursor: pointer;
+
+    select {
+        display: none;
+    }
+
+    .input-select-label {
+        position: absolute;
+        top: 14px;
+        left: 0;
+        background: transparent;
+        border: 0;
+        font-size: 16px;
+        padding: 0;
+        width: 100%;
+        color: $color-grey-800;
+        cursor: text;
+        @include transition((all 0.4s $easeOutExpo));
+        @extend .unselectable;
+        cursor: pointer;
+    }
+
+    .mdi.mdi-menu-down {
+        position: absolute;
+        top: 14px;
+        right: 0;
+        color: $color-grey-500;
+    }
+
+    .select-menu {
+        width: calc(100% + 32px);
+        position: absolute;
+        left: -16px;
+        background: $color-white;
+        @include box-shadow($side-z1-shadow);
+        @include border-radius(2px);
+        padding-top: 9px;
+        padding-bottom: 9px;
+        min-height: (36px + 18px);
+        z-index: 2;
+        cursor: default;
+        @include transform(scaleY(0));
+        @include transform-origin(50% 0);
+        @include transition((transform 0.4s $easeInExpo, opacity 0.3s $easeInExpo));
+        opacity: 0;
+        overflow: auto;
+        max-height: 198px;
+
+
+        .menu-item {
+            height: 36px;
+            font-size: 16px;
+            padding-left: 16px;
+            padding-right: 16px;
+            line-height: 36px;
+            cursor: pointer;
+            @include transition(all 0.3s $easeOutExpo);
+            color: $color-grey-700;
+            @extend .unselectable;
+
+            &:hover {
+                background: $color-grey-100;
+            }
+
+            &.selected {
+                color: $theme-accent;
+
+                &:hover {
+                    background: $theme-accent-50;
+                }
+            }
+        }
+    }
+
+    &.active {
+        .select-menu {
+            @include transform(scaleY(1));
+            opacity: 1;
+            @include transition((transform 0.5s $easeOutExpo, opacity 0.3s $easeInOutExpo));
+
+        }
+    }
+}
