@@ -7,9 +7,3 @@
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0); // ensures no half-pixel rendering in firefox
 }
-
-.mdi {
-	&:before {
-		font-size: 24px;
-	}
-}
