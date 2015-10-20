@@ -5117,6 +5117,64 @@ button.raised-button, a.raised-button, button.flat-button, a.flat-button {
     .mx-checkbox.disabled .mx-checkbox-box {
       fill: #9e9e9e; }
 
+ul.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-top: 8px;
+  background: #ffffff; }
+  ul.list li.single-line {
+    min-height: 48px;
+    padding: 8px 16px;
+    display: table;
+    width: 100%; }
+    ul.list li.single-line .label {
+      font-size: 16px;
+      line-height: 32px;
+      color: #424242;
+      display: block;
+      width: 100%;
+      float: left; }
+    ul.list li.single-line i.mdi {
+      float: left;
+      display: block;
+      vertical-align: middle;
+      margin-right: 32px;
+      line-height: 32px; }
+      ul.list li.single-line i.mdi ~ .label {
+        width: calc(100% - 56px); }
+    ul.list li.single-line img {
+      width: 40px;
+      display: block;
+      float: left;
+      margin-right: 16px;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      background-clip: padding-box; }
+      ul.list li.single-line img ~ .label {
+        width: calc(100% - 56px);
+        line-height: 40px; }
+      ul.list li.single-line img ~ i.mdi {
+        float: right;
+        margin: 0;
+        line-height: 40px; }
+        ul.list li.single-line img ~ i.mdi ~ .label {
+          width: calc(100% - 112px);
+          line-height: 40px; }
+  ul.list a {
+    text-decoration: none;
+    display: table;
+    width: 100%; }
+    ul.list a li {
+      -webkit-transition: all 0.3s cubic-bezier(1, 0, 0, 1);
+      -moz-transition: all 0.3s cubic-bezier(1, 0, 0, 1);
+      -ms-transition: all 0.3s cubic-bezier(1, 0, 0, 1);
+      -o-transition: all 0.3s cubic-bezier(1, 0, 0, 1);
+      transition: all 0.3s cubic-bezier(1, 0, 0, 1);
+      color: #424242; }
+    ul.list a:hover li {
+      background: #f5f5f5; }
+
 .input-select {
   height: 48px;
   width: 100%;

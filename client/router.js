@@ -48,6 +48,11 @@ Router.route('/ui/select', {
     template: 'uiSelectLayout'
 });
 
+Router.route('/ui/lists', {
+    controller: 'BaseController',
+    template: 'uiListLayout'
+});
+
 
 // docare Router
 
