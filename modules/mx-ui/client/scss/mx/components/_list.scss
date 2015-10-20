@@ -51,11 +51,77 @@ ul.list {
                 }
             }
         }
-
-
     }
 
-    a {
+    li.multi-line {
+        min-height: 88px;
+        padding: 12px 14px;
+        display: table;
+        width: 100%;
+        position: relative;
+
+        .label {
+            font-size: 16px;
+            line-height: 20px;
+            color: $color-grey-800;
+            display: block;
+            width: 100%;
+            float: left;
+
+            .caption {
+                font-size: 14px;
+                line-height: 20px;
+                color: $color-grey-600;
+                display: block;
+                width: 100%;
+            }
+        }
+
+        i.mdi {
+            float: left;
+            display: block;
+            vertical-align: middle;
+            margin-right: 32px;
+            line-height: 24px;
+            & ~ .label {
+                width: calc(100% - 56px);
+            }
+        }
+
+        img {
+            width: 40px;
+            display: block;
+            float: left;
+            margin-right: 16px;
+            @include border-radius(50%);
+            & ~ .label {
+                width: calc(100% - 56px);
+            }
+
+            & ~ i.mdi {
+                float: right;
+                margin: 0;
+
+                & ~ .label {
+                    width: calc(100% - 112px);
+                }
+            }
+        }
+
+        .divider {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            border-bottom: 1px solid $color-grey-200;
+
+            &.semi {
+                width: calc(100% - 56px);
+            }
+        }
+    }
+
+    & > a {
         text-decoration: none;
         display: table;
         width: 100%;
@@ -66,8 +132,15 @@ ul.list {
 
         &:hover {
             li {
-                background: $color-grey-100;
+                background: $color-grey-50;
             }
+        }
+    }
+
+    li{
+        @include transition(all 0.3s $easeInOutExpo);
+        &:hover {
+            background: $color-grey-50;
         }
     }
 }

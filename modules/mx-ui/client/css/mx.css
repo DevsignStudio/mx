@@ -5161,19 +5161,77 @@ ul.list {
         ul.list li.single-line img ~ i.mdi ~ .label {
           width: calc(100% - 112px);
           line-height: 40px; }
-  ul.list a {
+  ul.list li.multi-line {
+    min-height: 88px;
+    padding: 12px 14px;
+    display: table;
+    width: 100%;
+    position: relative; }
+    ul.list li.multi-line .label {
+      font-size: 16px;
+      line-height: 20px;
+      color: #424242;
+      display: block;
+      width: 100%;
+      float: left; }
+      ul.list li.multi-line .label .caption {
+        font-size: 14px;
+        line-height: 20px;
+        color: #757575;
+        display: block;
+        width: 100%; }
+    ul.list li.multi-line i.mdi {
+      float: left;
+      display: block;
+      vertical-align: middle;
+      margin-right: 32px;
+      line-height: 24px; }
+      ul.list li.multi-line i.mdi ~ .label {
+        width: calc(100% - 56px); }
+    ul.list li.multi-line img {
+      width: 40px;
+      display: block;
+      float: left;
+      margin-right: 16px;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      background-clip: padding-box; }
+      ul.list li.multi-line img ~ .label {
+        width: calc(100% - 56px); }
+      ul.list li.multi-line img ~ i.mdi {
+        float: right;
+        margin: 0; }
+        ul.list li.multi-line img ~ i.mdi ~ .label {
+          width: calc(100% - 112px); }
+    ul.list li.multi-line .divider {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      border-bottom: 1px solid #eeeeee; }
+      ul.list li.multi-line .divider.semi {
+        width: calc(100% - 56px); }
+  ul.list > a {
     text-decoration: none;
     display: table;
     width: 100%; }
-    ul.list a li {
+    ul.list > a li {
       -webkit-transition: all 0.3s cubic-bezier(1, 0, 0, 1);
       -moz-transition: all 0.3s cubic-bezier(1, 0, 0, 1);
       -ms-transition: all 0.3s cubic-bezier(1, 0, 0, 1);
       -o-transition: all 0.3s cubic-bezier(1, 0, 0, 1);
       transition: all 0.3s cubic-bezier(1, 0, 0, 1);
       color: #424242; }
-    ul.list a:hover li {
-      background: #f5f5f5; }
+    ul.list > a:hover li {
+      background: #fafafa; }
+  ul.list li {
+    -webkit-transition: all 0.3s cubic-bezier(1, 0, 0, 1);
+    -moz-transition: all 0.3s cubic-bezier(1, 0, 0, 1);
+    -ms-transition: all 0.3s cubic-bezier(1, 0, 0, 1);
+    -o-transition: all 0.3s cubic-bezier(1, 0, 0, 1);
+    transition: all 0.3s cubic-bezier(1, 0, 0, 1); }
+    ul.list li:hover {
+      background: #fafafa; }
 
 .input-select {
   height: 48px;
