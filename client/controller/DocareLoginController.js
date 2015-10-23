@@ -1,5 +1,5 @@
 DocareLoginController = BaseController.extend({
     yieldTemplates: {
-       'noToolbar': {to: 'toolbar'},
+        'noToolbar': {to: 'toolbar'},
     }
 });

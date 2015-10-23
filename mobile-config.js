@@ -4,7 +4,11 @@ App.info({
     description: 'The Materilex template',
     author: 'Devsign Studio',
     email: 'skynightz93@gmail.com',
-    website: 'devsign.my'
+    website: 'devsign.my',
+});
+
+App.accessRule('*', {
+    external: false,
 });
 
 App.icons({

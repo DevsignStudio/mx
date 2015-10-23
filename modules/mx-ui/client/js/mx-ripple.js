@@ -33,16 +33,16 @@ $.fn.mxRipple = function(args) {
             })
         );
 
-		if (args.rippleColor === "") {
-			args.rippleColor = $rippleCircle.css("background-color");
-		}
-		$element.css({
-			overflow: "hidden"
-		});
+        if (args.rippleColor === "") {
+            args.rippleColor = $rippleCircle.css("background-color");
+        }
+        $element.css({
+            overflow: "hidden"
+        });
 
-		$rippleCircle.css({
-			'background' : args.rippleColor
-		});
+        $rippleCircle.css({
+            'background' : args.rippleColor
+        });
     }).on('mouseup mouseout', function(e){
         $element.removeClass('clicked')
         .children(".ripple-circle").fadeOut("slow", function(){

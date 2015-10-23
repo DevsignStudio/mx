@@ -27,15 +27,15 @@ $.fn.mxFixAfterToolbar = function(args) {
                         $element.css("top", scrollTop - height);
 
                     } else {
-                        if (($position - scrollTop > 10  && stickToTop == false) ||
+                        if (($position - scrollTop > 10  && stickToTop === false) ||
                             (positionDifference - scrollTop >= height &&
-                            stickToTop == false)) {
+                            stickToTop === false)) {
                             $element.css("position", "fixed");
                             $element.css("top", 0);
                             stickToTop = true;
                         }
                     }
-                    if (positionDifference == 0) {
+                    if (positionDifference === 0) {
                         positionDifference = scrollTop;
                     }
 
@@ -77,6 +77,6 @@ $.fn.mxFixAfterToolbar = function(args) {
 
             $position = scrollTop;
         });
-    })
+    });
 
 };

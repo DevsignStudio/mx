@@ -1,6 +1,6 @@
 Mx.doAfterRouterLoad(function() {
-    $("table").each(function() {
-        if (!$(this).isMeteorOnce("mx-table")) {
+    $('table').each(function() {
+        if (!$(this).isMeteorOnce('mx-table')) {
             $(this).mxTable();
         }
     });

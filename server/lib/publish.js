@@ -1,5 +1,12 @@
-Meteor.publish("posts", function(){
+Meteor.publish('posts', function() {
     return Posts.find();
+});
+
+Push.allow({
+    send: function(userId, notification) {
+        // Allow all users to send to everybody - For test only!
+        return true;
+    },
 });
 
 // twilio = Twilio("ACdb67f64ff831fff07a60c72eb1697246", "4606bec5540c03eb81b54741d2e0cd06");
@@ -18,7 +25,6 @@ Meteor.publish("posts", function(){
 //     console.log("err");
 // }
 // });
-
 
 // Nexmo.initialize('dd499887', 'f8c59eb9', 'http', true);
 //

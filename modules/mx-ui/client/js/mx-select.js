@@ -1,6 +1,6 @@
 $.fn.mxSelect = function(args) {
     var Defaults = {
-        class : "",
+        class : '',
     };
 
     args = $.extend(true, {}, Defaults, args);
@@ -31,9 +31,7 @@ $.fn.mxSelect = function(args) {
             $temp.addClass(addiClass);
             $selected = $temp;
         }
-
-
-    })
+    });
 
     var $insertMenu = $selectMenu.children(".menu-item");
 
@@ -53,7 +51,7 @@ $.fn.mxSelect = function(args) {
             $parent.removeClass("active");
 
             $selected = $(this);
-        })
-    })
+        });
+    });
 
 };

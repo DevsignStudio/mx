@@ -1,6 +1,6 @@
 $.fn.mxNormalTextField = function(args) {
     var Defaults = {
-        guideText : "",
+        guideText: "",
     };
 
     args = $.extend(true, {}, Defaults, args);
@@ -18,7 +18,7 @@ $.fn.mxNormalTextField = function(args) {
 
 $.fn.mxFloatingTextField = function(args) {
     var Defaults = {
-        guideText : "",
+        guideText: "",
     };
 
     args = $.extend(true, {}, Defaults, args);
@@ -51,12 +51,12 @@ $.fn.mxFloatingTextField = function(args) {
     $element.on("focus", function() {
         $parent.addClass("active");
         $placeholder.addClass("active");
-    })
+    });
 
     $element.on("blur", function() {
         if ($element.val() === "") {
             $placeholder.removeClass("active");
         }
         $parent.removeClass("active");
-    })
+    });
 };
