@@ -1,0 +1,15 @@
+<template name="ApplicationLayout">
+    {{> yield "navigation"}}
+
+    {{> yield "toolbar"}}
+
+    <div class="page-container">
+        {{> yield}}
+    </div>
+
+
+    <style class="dont-count">
+        {{> yield "style"}}
+    </style>
+
+</template>
