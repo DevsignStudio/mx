@@ -1,5 +1,6 @@
 button.raised-button,a.raised-button {
 	background: $color-grey-100;
+	color: $color-grey-900;
 	@include box-shadow-z1;
 
 	&:hover, &:focus {
@@ -37,6 +38,7 @@ button.raised-button,a.raised-button {
 
 button.flat-button, a.flat-button {
 	background: transparent;
+	color: $color-grey-900;
 
 	&:hover, &:focus {
 		background: rgba(0,0,0,0.1);
@@ -58,7 +60,64 @@ button.flat-button, a.flat-button {
 	}
 }
 
-button.raised-button,a.raised-button, button.flat-button, a.flat-button {
+button.color-button, a.color-button {
+	background: $color-grey-900;
+	color: $color-white;
+
+	&.primary {
+		background: $theme-primary;
+	}
+
+	&.secondary {
+		background: $theme-accent;
+	}
+
+	&.white {
+		background: $color-white;
+		color: $color-grey-900;
+	}
+
+	&:hover, &:focus {
+		background: $color-grey-800;
+
+		&.primary {
+			background: $theme-primary-600;
+		}
+
+		&.secondary {
+			background: $theme-accent-600;
+		}
+
+		&.white {
+			background: $color-grey-50;
+			color: $color-grey-900;
+		}
+	}
+
+	&:disabled, &.disabled, &.disabled:focus, &.disabled:hover {
+		color: $color-grey-200;
+		background: $color-grey-600;
+		@include box-shadow(none);
+		pointer-events: none;
+
+		&.primary {
+			background: $theme-primary-300;
+		}
+
+		&.secondary {
+			background: $theme-accent-300;
+		}
+
+		&.white {
+			background: $color-grey-100;
+			color: $color-grey-400;
+		}
+	}
+}
+
+
+button.raised-button,a.raised-button, button.flat-button, a.flat-button,
+button.color-button,a.color-button {
 	@include ty-button;
 	min-width: 88px;
 	vertical-align: middle;
@@ -76,7 +135,6 @@ button.raised-button,a.raised-button, button.flat-button, a.flat-button {
 	position: relative;
 	text-decoration: none;
 	text-align: center;
-	color: $color-grey-900;
 	margin-top: 6px;
 	margin-bottom: 6px;
 	@include transform(translateZ(0));
@@ -93,7 +151,7 @@ button.raised-button,a.raised-button, button.flat-button, a.flat-button {
 		display: table;
 	}
 
-	@include webkit-fix{
+	@include webkit-fix {
 		line-height: 29px;
 		padding-top: 5px;
 		padding-bottom: 2px;
