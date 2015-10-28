@@ -1,0 +1,164 @@
+.chat-ui {
+    background: $color-grey-200;
+    padding: 16px;
+    position: relative;
+    overflow: hidden;
+    .chat-ui-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 64px);
+        padding: 8px;
+        padding-bottom: 0;
+        overflow: auto;
+    }
+
+    .chat-ui-list {
+        margin-bottom: 8px;
+        width: 100%;
+        display: table;
+        .chat-ui-list-item {
+            max-width: calc(100% - 104px);
+            display: table;
+            padding: 8px 12px;
+            background: $theme-accent;
+            color: $color-white;
+            font-size: 15px;
+            line-height: 20px;
+            @include border-radius(2px);
+            margin-left: 52px;
+            margin-bottom: 4px;
+            float: left;
+
+            .datetime {
+                font-size: 12px;
+                color: $color-grey-100;
+                margin-top: 4px;
+            }
+
+            &:first-of-type {
+                border-top-left-radius: 0;
+                position: relative;
+                margin-left: 12px;
+                &:before {
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 0 8px 8px 0;
+                    border-color: transparent $theme-accent transparent transparent;
+                    content: " ";
+                    position: absolute;
+                    left: -8px;
+                    top: 0;
+                }
+            }
+        }
+        img.profile-picture {
+            width: 40px;
+            height: 40px;
+            @include border-radius(50%);
+            float: left;
+        }
+
+        &.right {
+            .chat-ui-list-item {
+                background: $color-white;
+                color: $color-grey-800;
+                font-size: 15px;
+                float: right;
+                @include border-radius(2px);
+                margin-left: 0;
+                margin-right: 52px;
+                .datetime {
+                    font-size: 12px;
+                    color: $color-grey-600;
+                }
+
+                &:first-of-type {
+                    border-top-right-radius: 0;
+                    position: relative;
+                    margin-right: 12px;
+
+                    &:before {
+                        border-width: 8px 8px 0 0;
+                        border-color: $color-white transparent transparent transparent;
+                        right: -8px;
+                        left: auto;
+                        top: 0;
+                    }
+                }
+            }
+            img.profile-picture {
+                float: right;
+            }
+        }
+    }
+
+    .chat-ui-bottom {
+        width: 100%;
+        background: inherit;
+        height: 64px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+        padding: 8px;
+        padding-top: 0;
+
+        .chat-ui-text-box {
+            width: calc(100% - 104px);
+            font-size: 15px;
+            line-height: 20px;
+            background: $color-white;
+            color: $color-grey-800;
+            float: right;
+            @include border-radius(2px);
+            margin-left: 0;
+            border-top-right-radius: 0;
+            position: relative;
+            margin-right: 12px;
+            min-height: 48px;
+            max-height: 48px;
+            border: 0;
+            padding: 14px 16px;
+            resize: none;
+            display: block;
+
+            input[type="text"] {
+                width: 100%;
+                border: 0;
+                margin: 0;
+                background: transparent;
+                @include ty-body;
+                font-size: 15px!important;
+                line-height: 20px!important;
+            }
+
+            input[type="submit"] {
+                display: none;
+                visibility: hidden;
+            }
+
+            &:before {
+                width: 0;
+                height: 0;
+                border-style: solid;
+                content: " ";
+                position: absolute;
+                border-width: 8px 8px 0 0;
+                border-color: $color-white transparent transparent transparent;
+                right: -8px;
+                left: auto;
+                top: 0;
+            }
+
+        }
+        img.profile-picture {
+            width: 40px;
+            height: 40px;
+            @include border-radius(50%);
+            float: right;
+        }
+    }
+}
