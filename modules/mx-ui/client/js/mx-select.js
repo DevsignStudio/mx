@@ -46,11 +46,13 @@ $.fn.mxSelect = function(args) {
 
     $insertMenu.each(function() {
         $(this).on("click", function() {
+
             $selected.removeClass("selected");
             $(this).addClass("selected");
             $parent.removeClass("active");
 
             $selected = $(this);
+            $defaultText.html($selected.html());
         });
     });
 
