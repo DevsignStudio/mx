@@ -37,9 +37,13 @@ $.fn.mxFloatingTextField = function(args) {
     $parent.append($placeholder);
     $parent.append($guideText);
 
-    if ($element.val() !== "") {
-        $placeholder.addClass("active");
-    }
+
+    window.setTimeout(function(){
+        if ($element.val() !== "") {
+            $placeholder.addClass("active");
+        }
+    }, 100);
+
 
     $placeholder.on("click", function() {
         if (!$(this).hasClass("active")) {
