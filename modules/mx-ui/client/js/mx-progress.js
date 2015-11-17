@@ -62,3 +62,33 @@ $.fn.mxProgressAdd = function(args) {
         $target.attr("data-current", width);
     });
 };
+
+$.fn.mxProgressSub = function(args) {
+    var Defaults = {
+        target: '',
+        value: "0",
+    };
+
+    args = $.extend(true, {}, Defaults, args);
+    var $element = $(this);
+    var $target = $(args.target);
+
+    $element.on("click", function() {
+        var currentWidth = $target.attr("data-current");
+        var width = parseInt(args.value);
+
+        if ($target.hasAttr("data-goal")) {
+            var goal = $target.data("goal");
+            width = parseInt(currentWidth) - width;
+            if (width < 0) {
+                width = 0;
+            }
+        } else {
+            if (width < 0) {
+                width = 0;
+            }
+        }
+
+        $target.attr("data-current", width);
+    });
+};

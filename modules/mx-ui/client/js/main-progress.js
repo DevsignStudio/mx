@@ -14,4 +14,14 @@ Mx.doAfterRouterLoad(function() {
             });
         }
     });
+
+    $('[data-progress-sub]').each(function() {
+
+        if (!$(this).isMeteorOnce('mx-progress-bar-sub')) {
+            $(this).mxProgressSub({
+                target: $(this).data("target"),
+                value: $(this).data("progress-sub")
+            });
+        }
+    });
 });
