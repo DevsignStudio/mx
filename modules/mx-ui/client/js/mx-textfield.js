@@ -64,3 +64,23 @@ $.fn.mxFloatingTextField = function(args) {
         $parent.removeClass("active");
     });
 };
+
+$.fn.mxPrefixTextField = function(args) {
+    var Defaults = {
+        preText: "",
+    };
+
+    args = $.extend(true, {}, Defaults, args);
+    var $element = $(this);
+
+    var $defaultVal = args.preText;
+    $element.keydown(function(e) {
+        var oldvalue = $(this).val();
+        var field = this;
+        setTimeout(function() {
+            if (field.value.indexOf($defaultVal) !== 0) {
+                $(field).val(oldvalue);
+            }
+        }, 1);
+    });
+};

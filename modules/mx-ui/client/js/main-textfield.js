@@ -26,4 +26,18 @@ Mx.doAfterRouterLoad(function() {
             }
         }
     });
+
+    $('[data-prefix-field]').each(function() {
+        var $preText = $(this).val();
+
+        if (!$(this).isMeteorOnce('prefix-field')) {
+            if ($preText === undefined) {
+                $(this).mxPrefixTextField();
+            } else {
+                $(this).mxPrefixTextField({
+                    preText: $preText,
+                });
+            }
+        }
+    });
 });
