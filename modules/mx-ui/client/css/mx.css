@@ -5532,6 +5532,8 @@ table {
     color: #424242;
     border-bottom: 1px solid #e0e0e0;
     margin-bottom: 7px; }
+  .input-textfield input[type='number'], .input-floating-field input[type='number'] {
+    -moz-appearance: textfield; }
   .input-textfield input::-webkit-outer-spin-button, .input-floating-field input::-webkit-outer-spin-button,
   .input-textfield input::-webkit-inner-spin-button,
   .input-floating-field input::-webkit-inner-spin-button {
