@@ -5507,7 +5507,21 @@ table {
   margin-bottom: 20px; }
   .input-textfield input[type="text"], .input-floating-field input[type="text"],
   .input-textfield input[type="password"],
-  .input-floating-field input[type="password"] {
+  .input-floating-field input[type="password"],
+  .input-textfield input[type="tel"],
+  .input-floating-field input[type="tel"],
+  .input-textfield input[type="date"],
+  .input-floating-field input[type="date"],
+  .input-textfield input[type="time"],
+  .input-floating-field input[type="time"],
+  .input-textfield input[type="email"],
+  .input-floating-field input[type="email"],
+  .input-textfield input[type="url"],
+  .input-floating-field input[type="url"],
+  .input-textfield input[type="search"],
+  .input-floating-field input[type="search"],
+  .input-textfield input[type="number"],
+  .input-floating-field input[type="number"] {
     background: transparent;
     border: 0;
     font-size: 16px;
@@ -5518,6 +5532,13 @@ table {
     color: #424242;
     border-bottom: 1px solid #e0e0e0;
     margin-bottom: 7px; }
+  .input-textfield input::-webkit-outer-spin-button, .input-floating-field input::-webkit-outer-spin-button,
+  .input-textfield input::-webkit-inner-spin-button,
+  .input-floating-field input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */ }
   .input-textfield input::-webkit-input-placeholder, .input-floating-field input::-webkit-input-placeholder {
     color: #9e9e9e; }
   .input-textfield input:-moz-placeholder, .input-floating-field input:-moz-placeholder {
@@ -5573,13 +5594,17 @@ table {
     -ms-transform: translateY(0);
     -o-transform: translateY(0);
     transform: translateY(0); }
-  .input-textfield input.error + .border-line, .input-floating-field input.error + .border-line, .input-textfield input.success + .border-line, .input-floating-field input.success + .border-line {
+  .input-textfield input.error + .border-line, .input-floating-field input.error + .border-line,
+  .input-textfield input.success + .border-line,
+  .input-floating-field input.success + .border-line {
     -webkit-transform: scaleX(1);
     -moz-transform: scaleX(1);
     -ms-transform: scaleX(1);
     -o-transform: scaleX(1);
     transform: scaleX(1); }
-  .input-textfield input.error ~ .guide-text, .input-floating-field input.error ~ .guide-text, .input-textfield input.success ~ .guide-text, .input-floating-field input.success ~ .guide-text {
+  .input-textfield input.error ~ .guide-text, .input-floating-field input.error ~ .guide-text,
+  .input-textfield input.success ~ .guide-text,
+  .input-floating-field input.success ~ .guide-text {
     opacity: 1;
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0);

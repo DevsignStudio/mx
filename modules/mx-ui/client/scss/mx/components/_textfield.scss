@@ -1,13 +1,18 @@
-$active-color : $color-blue;
-
+$active-color: $color-blue;
 .input-textfield {
     height: 48px;
     width: 100%;
     position: relative;
     margin-bottom: 20px;
-
     input[type="text"],
-    input[type="password"] {
+    input[type="password"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="time"],
+    input[type="email"],
+    input[type="url"],
+    input[type="search"],
+    input[type="number"] {
         background: transparent;
         border: 0;
         font-size: 16px;
@@ -20,23 +25,28 @@ $active-color : $color-blue;
         margin-bottom: 7px;
     }
 
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        /* display: none; <- Crashes Chrome on hover */
+        -webkit-appearance: none;
+        margin: 0;
+        /* <-- Apparently some margin are still there even though it's hidden */
+    }
     input::-webkit-input-placeholder {
-       color: $color-grey-500;
+        color: $color-grey-500;
     }
-
-    input:-moz-placeholder { /* Firefox 18- */
-       color: $color-grey-500;
+    input:-moz-placeholder {
+        /* Firefox 18- */
+        color: $color-grey-500;
     }
-
-    input::-moz-placeholder {  /* Firefox 19+ */
-       color: $color-grey-500;
+    input::-moz-placeholder {
+        /* Firefox 19+ */
+        color: $color-grey-500;
     }
-
     input:-ms-input-placeholder {
-       color: $color-grey-500;
+        color: $color-grey-500;
     }
-
-    input + .border-line  {
+    input + .border-line {
         height: 2px;
         width: 100%;
         border-bottom: 2px solid $active-color;
@@ -46,11 +56,9 @@ $active-color : $color-blue;
         @include transform(scaleX(0));
         @include transition(transform 0.4s $easeInOutExpo);
     }
-
     input:focus + .border-line {
         @include transform(scaleX(1));
     }
-
     input ~ .guide-text {
         font-size: 12px;
         line-height: 12px;
@@ -59,110 +67,91 @@ $active-color : $color-blue;
         @include transform(translateY(-20px));
         @include transition((opacity 0.4s $easeInOutExpo, transform 0.4s $easeInOutExpo));
     }
-
     input:focus ~ .guide-text {
         opacity: 1;
         @include transform(translateY(0));
     }
-
-    input.error, input.success  {
+    input.error,
+    input.success {
         & + .border-line {
             @include transform(scaleX(1));
         }
-
         & ~ .guide-text {
             opacity: 1;
             @include transform(translateY(0));
         }
     }
-
     input.error {
         & + .border-line {
             border-bottom: 2px solid $color-red;
         }
-
         & ~ .guide-text {
             color: $color-red;
         }
     }
-
     input.success {
         & + .border-line {
             border-bottom: 2px solid $color-green;
         }
-
         & ~ .guide-text {
             color: $color-green;
         }
     }
-
     input:disabled {
         border-bottom: 1px dashed $color-grey-400;
         color: $color-grey-500;
-
         & + .border-line {
             @include transform(scaleX(0));
         }
-
         & ~ .guide-text {
             color: $color-grey-500;
         }
     }
-
     input.inverse {
         color: $color-grey-400;
         border-bottom: 1px solid $color-grey-800;
-
         &::-webkit-input-placeholder {
-           color: $color-grey-700;
+            color: $color-grey-700;
         }
-
-        &:-moz-placeholder { /* Firefox 18- */
-           color: $color-grey-700;
+        &:-moz-placeholder {
+            /* Firefox 18- */
+            color: $color-grey-700;
         }
-
-        &::-moz-placeholder {  /* Firefox 19+ */
-           color: $color-grey-700;
+        &::-moz-placeholder {
+            /* Firefox 19+ */
+            color: $color-grey-700;
         }
-
         &:-ms-input-placeholder {
-           color: $color-grey-700;
+            color: $color-grey-700;
         }
-
         &:focus {
             color: $color-grey-200;
         }
-
         &:disabled {
             border-bottom: 1px dashed $color-grey-800;
             color: $color-grey-700;
-
             & ~ .guide-text {
                 color: $color-grey-700;
             }
         }
     }
 }
-
 .input-floating-field {
     @extend .input-textfield;
-
     input::-webkit-input-placeholder {
-       color: transparent;
+        color: transparent;
     }
-
-    input:-moz-placeholder { /* Firefox 18- */
-       color: transparent;
+    input:-moz-placeholder {
+        /* Firefox 18- */
+        color: transparent;
     }
-
-    input::-moz-placeholder {  /* Firefox 19+ */
-       color: transparent;
+    input::-moz-placeholder {
+        /* Firefox 19+ */
+        color: transparent;
     }
-
     input:-ms-input-placeholder {
-       color: transparent;
+        color: transparent;
     }
-
     input ~ .input-placeholder {
         position: absolute;
         top: 14px;
@@ -181,34 +170,28 @@ $active-color : $color-blue;
             @include transform(translateY(-18px) );
         }
     }
-
     &.active {
-         .border-line {
+        .border-line {
             @include transform(scaleX(1));
         }
-
         .guide-text {
             opacity: 1;
             @include transform(translateY(0));
         }
-
         .input-placeholder {
             color: $active-color;
         }
     }
-
     input.error {
         & ~ .input-placeholder {
             color: $color-red;
         }
     }
-
     input.success {
         & ~ .input-placeholder {
             color: $color-green;
         }
     }
-
     input:disabled {
         & ~ .input-placeholder {
             color: $color-grey-500;
