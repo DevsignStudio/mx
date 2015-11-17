@@ -1,0 +1,28 @@
+.progress-bar {
+    position: relative;
+    height: 4px;
+    width: 100%;
+    background: $color-grey-300;
+
+    &.determinate {
+        & .accomplish {
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            top: 0;
+            left: 0;
+            @include transform(scaleX(0));
+            background: $theme-primary-500;
+            @include transition(all 0.5s $easeOutExpo);
+            @include transform-origin(0);
+
+        }
+
+        &.accent {
+            & .accomplish {
+                background: $theme-accent-500;
+
+            }
+        }
+    }
+}
