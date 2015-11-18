@@ -16,9 +16,6 @@ $.fn.mxSheet = function(args) {
         $target.addClass("active");
     });
 
-    // $(window).on('hashchange', function() {
-    //     $target.removeClass("active");
-    // });
 
     if (window.history && window.history.pushState) {
 
@@ -34,6 +31,5 @@ $.fn.mxSheet = function(args) {
                 }
             }
         });
-        // window.history.pushState('forward', null, './#forward');
     }
 };
