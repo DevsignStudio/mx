@@ -12,4 +12,10 @@ Mx.doAfterRouterLoad(function() {
             }
         }
     });
+
+    $('.input-datepicker').each(function() {
+        if (!$(this).isMeteorOnce('sheet')) {
+            $(this).mxCalendarSheet();
+        }
+    });
 });
